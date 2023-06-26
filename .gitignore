@@ -12,3 +12,4 @@ tmp/
 ckpt/*.eval/
 *.ply
 *.json
+dsgn2_ep58.pth
