@@ -1,6 +1,9 @@
 // Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved.
 #include <ATen/ATen.h>
+#include <ATen/TensorUtils.h>
 #include <ATen/cuda/CUDAContext.h>
+#include <c10/cuda/CUDAGuard.h>
+#include <ATen/cuda/CUDAApplyUtils.cuh>
 
 #include <THC/THCAtomics.cuh>
 #include <THC/THCDeviceUtils.cuh>
@@ -267,7 +270,7 @@ at::Tensor BuildDpsCostVolume_forward_cuda(const at::Tensor& left,
   auto output_size = num_batch * sep * 2 * max_disp * height * width;
   cudaStream_t stream = at::cuda::getCurrentCUDAStream();
 
-  dim3 grid(std::min(THCCeilDiv((long)(output_size / 2), 512L), 4096L));
+  dim3 grid(std::min(ATenCeilDiv((long)(output_size / 2), 512L), 4096L));
   dim3 block(512);
 
   if (output.numel() == 0) {
@@ -315,7 +318,7 @@ std::tuple<at::Tensor, at::Tensor> BuildDpsCostVolume_backward_cuda(const at::Te
 
   cudaStream_t stream = at::cuda::getCurrentCUDAStream();
 
-  dim3 grid(std::min(THCCeilDiv((long)grad.numel(), 512L), 4096L));
+  dim3 grid(std::min(ATenCeilDiv((long)grad.numel(), 512L), 4096L));
   dim3 block(512);
 
   // handle possibly empty gradients
