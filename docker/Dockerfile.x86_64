@@ -1,0 +1,73 @@
+FROM nvcr.io/nvidia/l4t-pytorch:r35.2.1-pth2.0-py3
+
+# Install dependencies
+
+#Set docker container username
+ARG USER=dsgn2
+ARG UID=1001
+ARG GID=1001
+ARG PW=user 
+RUN useradd -m ${USER} --uid=${UID} && echo "${USER}:${PW}" | chpasswd
+
+RUN apt-get update && apt-get install -y \
+        wget vim usbutils \
+        &&  apt install -y protobuf-compiler \
+        && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /home/${USER}
+USER root
+RUN cd /home/${USER} && chown -R ${UID}:${GID} ./
+USER ${UID}:${GID}
+
+ENV PATH="${PATH}:/home/${USER}/.local/bin"
+RUN pip3 install -U --no-cache-dir protobuf3
+RUN pip3 install -U --no-cache-dir numpy \
+&& pip3 install -U --no-cache-dir matplotlib
+RUN pip3 install -U --no-cache-dir pycocotools \
+&& pip3 install -U openmim
+RUN mim install mmcv-full
+# Install DSGN++
+RUN git clone https://github.com/Arcwy0/DSGN2_fork --branch main
+RUN cd DSGN2_fork/mmdetection-v2.22.0/ && pip3 install -e .
+
+# Install cmake v3.26.4
+USER root
+RUN apt-get update && apt update && apt install libboost-dev -y \
+        && rm -rf /var/lib/apt/lists/*
+ENV PATH="${PATH}:/usr/local/bin/cmake"
+ENV PATH="${PATH}:/usr/include/boost"
+# RUN echo "export PATH=/usr/local/bin/cmake:$PATH" >> ~/.bashrc
+# RUN echo "export PATH=/usr/include/boost:$PATH" >> ~/.bashrc
+# RUN source ~/.bashrc
+USER ${UID}:${GID}
+# RUN git clone https://github.com/traveller59/spconv --recursive \
+#         && cd spconv \
+#         && git reset --hard f22dd9 \
+#         && git submodule update --recursive
+RUN git clone https://github.com/Arcwy0/spconv121_torch200.git
+RUN cd ./spconv121_torch200/third_party/ && git clone --recurse-submodules https://github.com/pybind/pybind11.git
+RUN cd ./spconv121_torch200 && python3 setup.py bdist_wheel
+RUN cd ./spconv121_torch200/dist && ls && pip3 install spconv-1.2.1-cp38-cp38-linux_aarch64.whl
+# Install spconv v1.0
+# RUN cd /home/${USER}
+# RUN git clone https://github.com/traveller59/spconv.git --recursive
+# RUN cd ./spconv && git checkout 8da6f967fb9a054d8870c3515b1b44eca2103634 && python3 setup.py bdist_wheel
+# RUN pip3 install -U --no-cache-dir /root/spconv/dist/spconv-1.0-cp36-cp36m-linux_x86_64.whl && \
+#     rm -rf /root/spconv
+USER ${UID}:${GID}
+RUN cd /home/${USER}
+SHELL ["/bin/bash", "-l", "-c"]
+ARG TORCH_CUDA_ARCH_LIST=6.1+PTX
+ENV THCudaCheck = C10_CUDA_CHECK
+ENV FORCE_CUDA="1"
+RUN export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+RUN export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+RUN echo "export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}" >> ~/.bashrc &&\
+    echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}" >> ~/.bashrc
+RUN export CUDA_NVCC_EXECUTABLE=$(which nvcc)
+RUN python3 -c "import torch;print(torch.cuda.is_available());" \
+ && pip3 install -U Cython
+RUN cd /home/${USER}/DSGN2_fork/ && pip3 install -e .
+# RUN cd /home/${USER}/DSGN2_fork/ && pip3 install -e .
+
+RUN cd /home/${USER}/

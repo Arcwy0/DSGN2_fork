@@ -2,7 +2,7 @@
 #include <ATen/ATen.h>
 #include <ATen/cuda/CUDAContext.h>
 
-#include <THC/THC.h>
+//#include <THC/THC.h>
 #include <THC/THCAtomics.cuh>
 #include <THC/THCDeviceUtils.cuh>
 
@@ -233,7 +233,7 @@ at::Tensor BuildCostVolume_forward_cuda(const at::Tensor& left,
   dim3 block(512);
 
   if (output.numel() == 0) {
-    THCudaCheck(cudaGetLastError());
+    C10_CUDA_CHECK(cudaGetLastError());
     return output;
   }
 
@@ -251,7 +251,7 @@ at::Tensor BuildCostVolume_forward_cuda(const at::Tensor& left,
          output.data<scalar_t>(),
          downsample);
   });
-  THCudaCheck(cudaGetLastError());
+  C10_CUDA_CHECK(cudaGetLastError());
   return output;
 }
 
@@ -280,7 +280,7 @@ std::tuple<at::Tensor, at::Tensor> BuildCostVolume_backward_cuda(const at::Tenso
 
   // handle possibly empty gradients
   if (grad.numel() == 0) {
-    THCudaCheck(cudaGetLastError());
+    C10_CUDA_CHECK(cudaGetLastError());
     return std::make_tuple(grad_left, grad_right);
   }
 
@@ -298,7 +298,7 @@ std::tuple<at::Tensor, at::Tensor> BuildCostVolume_backward_cuda(const at::Tenso
          grad_right.data<scalar_t>(),
          downsample);
   });
-  THCudaCheck(cudaGetLastError());
+  C10_CUDA_CHECK(cudaGetLastError());
   return std::make_tuple(grad_left, grad_right);
 }
 

@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+    jetson-app:
+        image: ${ARCH}dsgn2:${TAG}
+        build:
+            context: ${PRODUCTION_PATH}
+            dockerfile: Dockerfile.${ARCH}
+        container_name: dsgn2
+        tty: true

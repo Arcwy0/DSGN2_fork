@@ -1,0 +1,42 @@
+FROM python:3.11.4-alpine3.18
+
+# Set docker container username
+USER root
+RUN /bin/sh -c "apk add --no-cache bash"
+RUN apk add --no-cache git
+RUN apk add shadow
+RUN apk add udev
+ARG USER=DSGN2
+ARG UID=1001
+ARG GID=1001
+ARG PW=user
+RUN apk add sudo
+RUN apk add doas
+RUN addgroup -S gpio
+RUN adduser -S ${USER} -G gpio --uid=1001; \
+echo "${USER}:{PW}" | chpasswd; \
+echo 'permit persist :wheel' > /etc/doas.d/doas.conf
+USER tiny_trigger
+
+# install "virtualenv", since the vast majority of users of this image will want it
+RUN pip3 install --no-cache-dir virtualenv
+USER root
+RUN bin/sh -c "cd /usr/local/lib/python3.11/"
+RUN sudo pip install Jetson.GPIO
+RUN cp /usr/local/lib/python3.11/site-packages/Jetson/GPIO/99-gpio.rules /etc/udev/rules.d/
+
+
+ENV DEBIAN_FRONTEND noninteractive
+USER tiny_trigger
+# set PYTHONPATH to point to dist-packages
+ENV PYTHONPATH /usr/local/lib/python3.11/site-packages:$PYTHONPATH
+
+WORKDIR /home/${USER}
+USER root
+RUN cd /home/${USER} && chown -R ${UID}:${GID} ./
+
+USER ${UID}:${GID}
+
+# RUN addgroup -S gpio
+# RUN adduser -S tiny_trigger -G gpioRUN addgroup -S gpio
+# RUN adduser -S tiny_trigger -G gpio
