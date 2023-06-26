@@ -2,7 +2,6 @@
 #include <ATen/ATen.h>
 #include <ATen/cuda/CUDAContext.h>
 
-#include <THC/THC.h>
 #include <THC/THCAtomics.cuh>
 #include <THC/THCDeviceUtils.cuh>
 
@@ -241,7 +240,7 @@ at::Tensor BuildDpsGeometryVolume_forward_cuda(const at::Tensor& img,
   dim3 block(512);
 
   if (output.numel() == 0) {
-    THCudaCheck(cudaGetLastError());
+    C10_CUDA_CHECK(cudaGetLastError());
     return output;
   }
 
@@ -262,7 +261,7 @@ at::Tensor BuildDpsGeometryVolume_forward_cuda(const at::Tensor& img,
          x_num,
          output.data<scalar_t>());
   });
-  THCudaCheck(cudaGetLastError());
+  C10_CUDA_CHECK(cudaGetLastError());
   return output;
 }
 
@@ -294,7 +293,7 @@ at::Tensor BuildDpsGeometryVolume_backward_cuda(const at::Tensor& grad,
 
   // handle possibly empty gradients
   if (grad.numel() == 0) {
-    THCudaCheck(cudaGetLastError());
+    C10_CUDA_CHECK(cudaGetLastError());
     return grad_input;
   }
 
@@ -315,7 +314,7 @@ at::Tensor BuildDpsGeometryVolume_backward_cuda(const at::Tensor& grad,
          x_num,
          grad_input.data<scalar_t>());
   });
-  THCudaCheck(cudaGetLastError());
+  C10_CUDA_CHECK(cudaGetLastError());
   return grad_input;
 }
 
