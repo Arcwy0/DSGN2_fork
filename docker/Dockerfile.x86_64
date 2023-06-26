@@ -44,6 +44,7 @@ USER ${UID}:${GID}
 #         && cd spconv \
 #         && git reset --hard f22dd9 \
 #         && git submodule update --recursive
+ENV DEBIAN_FRONTEND noninteractive
 RUN git clone https://github.com/Arcwy0/spconv121_torch200.git
 RUN cd ./spconv121_torch200/third_party/ && git clone --recurse-submodules https://github.com/pybind/pybind11.git
 RUN cd ./spconv121_torch200 && python3 setup.py bdist_wheel
