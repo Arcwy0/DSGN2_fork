@@ -4,6 +4,7 @@
 #include <ATen/cuda/CUDAContext.h>
 #include <c10/cuda/CUDAGuard.h>
 #include <ATen/cuda/CUDAApplyUtils.cuh>
+#include <ATen/ceil_div.h>
 #include <THC/THCAtomics.cuh>
 #include <THC/THCDeviceUtils.cuh>
 
@@ -230,7 +231,7 @@ at::Tensor BuildCostVolume_forward_cuda(const at::Tensor& left,
   auto output_size = num_batch * channels * 2 * max_disp * height * width;
   cudaStream_t stream = at::cuda::getCurrentCUDAStream();
 
-  dim3 grid(std::min(ATenCeilDiv((long)(output_size / 2), 512L), 4096L));
+  dim3 grid(std::min(at::ceil_div((long)(output_size / 2), 512L), 4096L));
   dim3 block(512);
 
   if (output.numel() == 0) {
@@ -276,7 +277,7 @@ std::tuple<at::Tensor, at::Tensor> BuildCostVolume_backward_cuda(const at::Tenso
 
   cudaStream_t stream = at::cuda::getCurrentCUDAStream();
 
-  dim3 grid(std::min(ATenCeilDiv((long)grad.numel(), 512L), 4096L));
+  dim3 grid(std::min(at::ceil_div((long)grad.numel(), 512L), 4096L));
   dim3 block(512);
 
   // handle possibly empty gradients
