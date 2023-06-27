@@ -1,6 +1,14 @@
 #include <torch/serialize/tensor.h>
 #include <vector>
-#include <THC/THC.h>
+#include <ATen/ATen.h>
+#include <ATen/TensorUtils.h>
+#include <ATen/cuda/CUDAContext.h>
+#include <c10/cuda/CUDAGuard.h>
+#include <ATen/cuda/CUDAApplyUtils.cuh>
+#include <ATen/ceil_div.h>
+#include <THC/THCAtomics.cuh>
+#include <THC/THCDeviceUtils.cuh>
+//#include <THC/THC.h>
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -8,7 +16,7 @@
 #include <cuda_runtime_api.h>
 #include "voxel_query_gpu.h"
 
-extern THCState *state;
+//extern THCState *state;
 
 #define CHECK_CUDA(x) do { \
   if (!x.type().is_cuda()) { \
