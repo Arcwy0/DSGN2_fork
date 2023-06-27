@@ -4,6 +4,6 @@ services:
         image: ${ARCH}dsgn2:${TAG}
         build:
             context: ${PRODUCTION_PATH}
-            dockerfile: Dockerfile.x86_64
+            dockerfile: Dockerfile.${ARCH}
         container_name: dsgn2
         tty: true
