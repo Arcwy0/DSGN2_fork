@@ -1,0 +1,781 @@
+MBOL’
+#0 7205.1       348 |   namespace ns { constexpr Symbol s(static_cast<unique_t>(_keys::ns##_##s)); }
+#0 7205.1           |                                   ^
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/interned_strings.h:296:3: note: in expansion of macro ‘FORALL_ATTR_BASE_SYMBOLS’
+#0 7205.1       296 |   FORALL_ATTR_BASE_SYMBOLS(_)        \
+#0 7205.1           |   ^~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/interned_strings.h:349:1: note: in expansion of macro ‘FORALL_NS_SYMBOLS’
+#0 7205.1       349 | FORALL_NS_SYMBOLS(DEFINE_SYMBOL)
+#0 7205.1           | ^~~~~~~~~~~~~~~~~
+#0 7205.1     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/MethodOperators.h:259,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:40,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,   
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,    
+#0 7205.1                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:1:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/ops/min_ops.h:61:18: note:   ‘at::_ops::min’
+#0 7205.1        61 | struct TORCH_API min {
+#0 7205.1           |                  ^~~
+#0 7205.1     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/NativeFunctions.h:825,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/TensorIndexing.h:13,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/ATen.h:18,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/types.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:7,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,   
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,    
+#0 7205.1                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:1:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/ops/min_native.h:27:22: note:   ‘at::native::min’
+#0 7205.1        27 | TORCH_API at::Tensor min(const at::Tensor & self, const at::Tensor & other);
+#0 7205.1           |                      ^~~
+#0 7205.1     In file included from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:7:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh: In function ‘bool at::cuda::CUDA_tensor_apply2(at::TensorBase, at::TensorBase, Op, at::cuda::TensorArgType, at::cuda::TensorArgType)’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:446:6: error: expected primary-expression before ‘<’ token
+#0 7205.1       446 |    <<<grid, block, 0, at::cuda::getCurrentCUDAStream(curDevice)>>>(    \
+#0 7205.1           |      ^
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:453:7: note: in expansion of macro ‘HANDLE_CASE’
+#0 7205.1       453 |       HANDLE_CASE(TYPE, A, 1);              \
+#0 7205.1           |       ^~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:467:7: note: in expansion of macro ‘HANDLE_B_CASE’
+#0 7205.1       467 |       HANDLE_B_CASE(TYPE, 1, B);            \
+#0 7205.1           |       ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:489:5: note: in expansion of macro ‘HANDLE_A_CASE’
+#0 7205.1       489 |     HANDLE_A_CASE(unsigned int, aInfo.dims, bInfo.dims);
+#0 7205.1           |     ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:446:66: error: expected primary-expression before ‘>’ token
+#0 7205.1       446 |    <<<grid, block, 0, at::cuda::getCurrentCUDAStream(curDevice)>>>(    \
+#0 7205.1           |                                                                  ^
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:453:7: note: in expansion of macro ‘HANDLE_CASE’
+#0 7205.1       453 |       HANDLE_CASE(TYPE, A, 1);              \
+#0 7205.1           |       ^~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:467:7: note: in expansion of macro ‘HANDLE_B_CASE’
+#0 7205.1       467 |       HANDLE_B_CASE(TYPE, 1, B);            \
+#0 7205.1           |       ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:489:5: note: in expansion of macro ‘HANDLE_A_CASE’
+#0 7205.1       489 |     HANDLE_A_CASE(unsigned int, aInfo.dims, bInfo.dims);
+#0 7205.1           |     ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:446:6: error: expected primary-expression before ‘<’ token
+#0 7205.1       446 |    <<<grid, block, 0, at::cuda::getCurrentCUDAStream(curDevice)>>>(    \
+#0 7205.1           |      ^
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:456:7: note: in expansion of macro ‘HANDLE_CASE’
+#0 7205.1       456 |       HANDLE_CASE(TYPE, A, 2);              \
+#0 7205.1           |       ^~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:467:7: note: in expansion of macro ‘HANDLE_B_CASE’
+#0 7205.1       467 |       HANDLE_B_CASE(TYPE, 1, B);            \
+#0 7205.1           |       ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:489:5: note: in expansion of macro ‘HANDLE_A_CASE’
+#0 7205.1       489 |     HANDLE_A_CASE(unsigned int, aInfo.dims, bInfo.dims);
+#0 7205.1           |     ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:446:66: error: expected primary-expression before ‘>’ token
+#0 7205.1       446 |    <<<grid, block, 0, at::cuda::getCurrentCUDAStream(curDevice)>>>(    \
+#0 7205.1           |                                                                  ^
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:456:7: note: in expansion of macro ‘HANDLE_CASE’
+#0 7205.1       456 |       HANDLE_CASE(TYPE, A, 2);              \
+#0 7205.1           |       ^~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:467:7: note: in expansion of macro ‘HANDLE_B_CASE’
+#0 7205.1       467 |       HANDLE_B_CASE(TYPE, 1, B);            \
+#0 7205.1           |       ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:489:5: note: in expansion of macro ‘HANDLE_A_CASE’
+#0 7205.1       489 |     HANDLE_A_CASE(unsigned int, aInfo.dims, bInfo.dims);
+#0 7205.1           |     ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:446:6: error: expected primary-expression before ‘<’ token
+#0 7205.1       446 |    <<<grid, block, 0, at::cuda::getCurrentCUDAStream(curDevice)>>>(    \
+#0 7205.1           |      ^
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:459:7: note: in expansion of macro ‘HANDLE_CASE’
+#0 7205.1       459 |       HANDLE_CASE(TYPE, A, -1);             \
+#0 7205.1           |       ^~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:467:7: note: in expansion of macro ‘HANDLE_B_CASE’
+#0 7205.1       467 |       HANDLE_B_CASE(TYPE, 1, B);            \
+#0 7205.1           |       ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:489:5: note: in expansion of macro ‘HANDLE_A_CASE’
+#0 7205.1       489 |     HANDLE_A_CASE(unsigned int, aInfo.dims, bInfo.dims);
+#0 7205.1           |     ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:446:66: error: expected primary-expression before ‘>’ token
+#0 7205.1       446 |    <<<grid, block, 0, at::cuda::getCurrentCUDAStream(curDevice)>>>(    \
+#0 7205.1           |                                                                  ^
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:459:7: note: in expansion of macro ‘HANDLE_CASE’
+#0 7205.1       459 |       HANDLE_CASE(TYPE, A, -1);             \
+#0 7205.1           |       ^~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:467:7: note: in expansion of macro ‘HANDLE_B_CASE’
+#0 7205.1       467 |       HANDLE_B_CASE(TYPE, 1, B);            \
+#0 7205.1           |       ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:489:5: note: in expansion of macro ‘HANDLE_A_CASE’
+#0 7205.1       489 |     HANDLE_A_CASE(unsigned int, aInfo.dims, bInfo.dims);
+#0 7205.1           |     ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:446:6: error: expected primary-expression before ‘<’ token
+#0 7205.1       446 |    <<<grid, block, 0, at::cuda::getCurrentCUDAStream(curDevice)>>>(    \
+#0 7205.1           |      ^
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:453:7: note: in expansion of macro ‘HANDLE_CASE’
+#0 7205.1       453 |       HANDLE_CASE(TYPE, A, 1);              \
+#0 7205.1           |       ^~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:470:7: note: in expansion of macro ‘HANDLE_B_CASE’
+#0 7205.1       470 |       HANDLE_B_CASE(TYPE, 2, B);            \
+#0 7205.1           |       ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:489:5: note: in expansion of macro ‘HANDLE_A_CASE’
+#0 7205.1       489 |     HANDLE_A_CASE(unsigned int, aInfo.dims, bInfo.dims);
+#0 7205.1           |     ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:446:66: error: expected primary-expression before ‘>’ token
+#0 7205.1       446 |    <<<grid, block, 0, at::cuda::getCurrentCUDAStream(curDevice)>>>(    \
+#0 7205.1           |                                                                  ^
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:453:7: note: in expansion of macro ‘HANDLE_CASE’
+#0 7205.1       453 |       HANDLE_CASE(TYPE, A, 1);              \
+#0 7205.1           |       ^~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:470:7: note: in expansion of macro ‘HANDLE_B_CASE’
+#0 7205.1       470 |       HANDLE_B_CASE(TYPE, 2, B);            \
+#0 7205.1           |       ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:489:5: note: in expansion of macro ‘HANDLE_A_CASE’
+#0 7205.1       489 |     HANDLE_A_CASE(unsigned int, aInfo.dims, bInfo.dims);
+#0 7205.1           |     ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:446:6: error: expected primary-expression before ‘<’ token
+#0 7205.1       446 |    <<<grid, block, 0, at::cuda::getCurrentCUDAStream(curDevice)>>>(    \
+#0 7205.1           |      ^
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:456:7: note: in expansion of macro ‘HANDLE_CASE’
+#0 7205.1       456 |       HANDLE_CASE(TYPE, A, 2);              \
+#0 7205.1           |       ^~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:470:7: note: in expansion of macro ‘HANDLE_B_CASE’
+#0 7205.1       470 |       HANDLE_B_CASE(TYPE, 2, B);            \
+#0 7205.1           |       ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:489:5: note: in expansion of macro ‘HANDLE_A_CASE’
+#0 7205.1       489 |     HANDLE_A_CASE(unsigned int, aInfo.dims, bInfo.dims);
+#0 7205.1           |     ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:446:66: error: expected primary-expression before ‘>’ token
+#0 7205.1       446 |    <<<grid, block, 0, at::cuda::getCurrentCUDAStream(curDevice)>>>(    \
+#0 7205.1           |                                                                  ^
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:456:7: note: in expansion of macro ‘HANDLE_CASE’
+#0 7205.1       456 |       HANDLE_CASE(TYPE, A, 2);              \
+#0 7205.1           |       ^~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:470:7: note: in expansion of macro ‘HANDLE_B_CASE’
+#0 7205.1       470 |       HANDLE_B_CASE(TYPE, 2, B);            \
+#0 7205.1           |       ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:489:5: note: in expansion of macro ‘HANDLE_A_CASE’
+#0 7205.1       489 |     HANDLE_A_CASE(unsigned int, aInfo.dims, bInfo.dims);
+#0 7205.1           |     ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:446:6: error: expected primary-expression before ‘<’ token
+#0 7205.1       446 |    <<<grid, block, 0, at::cuda::getCurrentCUDAStream(curDevice)>>>(    \
+#0 7205.1           |      ^
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:459:7: note: in expansion of macro ‘HANDLE_CASE’
+#0 7205.1       459 |       HANDLE_CASE(TYPE, A, -1);             \
+#0 7205.1           |       ^~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:470:7: note: in expansion of macro ‘HANDLE_B_CASE’
+#0 7205.1       470 |       HANDLE_B_CASE(TYPE, 2, B);            \
+#0 7205.1           |       ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:489:5: note: in expansion of macro ‘HANDLE_A_CASE’
+#0 7205.1       489 |     HANDLE_A_CASE(unsigned int, aInfo.dims, bInfo.dims);
+#0 7205.1           |     ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:446:66: error: expected primary-expression before ‘>’ token
+#0 7205.1       446 |    <<<grid, block, 0, at::cuda::getCurrentCUDAStream(curDevice)>>>(    \
+#0 7205.1           |                                                                  ^
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:459:7: note: in expansion of macro ‘HANDLE_CASE’
+#0 7205.1       459 |       HANDLE_CASE(TYPE, A, -1);             \
+#0 7205.1           |       ^~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:470:7: note: in expansion of macro ‘HANDLE_B_CASE’
+#0 7205.1       470 |       HANDLE_B_CASE(TYPE, 2, B);            \
+#0 7205.1           |       ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:489:5: note: in expansion of macro ‘HANDLE_A_CASE’
+#0 7205.1       489 |     HANDLE_A_CASE(unsigned int, aInfo.dims, bInfo.dims);
+#0 7205.1           |     ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:446:6: error: expected primary-expression before ‘<’ token
+#0 7205.1       446 |    <<<grid, block, 0, at::cuda::getCurrentCUDAStream(curDevice)>>>(    \
+#0 7205.1           |      ^
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:453:7: note: in expansion of macro ‘HANDLE_CASE’
+#0 7205.1       453 |       HANDLE_CASE(TYPE, A, 1);              \
+#0 7205.1           |       ^~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:473:7: note: in expansion of macro ‘HANDLE_B_CASE’
+#0 7205.1       473 |       HANDLE_B_CASE(TYPE, -1, B);           \
+#0 7205.1           |       ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:489:5: note: in expansion of macro ‘HANDLE_A_CASE’
+#0 7205.1       489 |     HANDLE_A_CASE(unsigned int, aInfo.dims, bInfo.dims);
+#0 7205.1           |     ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:446:66: error: expected primary-expression before ‘>’ token
+#0 7205.1       446 |    <<<grid, block, 0, at::cuda::getCurrentCUDAStream(curDevice)>>>(    \
+#0 7205.1           |                                                                  ^
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:453:7: note: in expansion of macro ‘HANDLE_CASE’
+#0 7205.1       453 |       HANDLE_CASE(TYPE, A, 1);              \
+#0 7205.1           |       ^~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:473:7: note: in expansion of macro ‘HANDLE_B_CASE’
+#0 7205.1       473 |       HANDLE_B_CASE(TYPE, -1, B);           \
+#0 7205.1           |       ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:489:5: note: in expansion of macro ‘HANDLE_A_CASE’
+#0 7205.1       489 |     HANDLE_A_CASE(unsigned int, aInfo.dims, bInfo.dims);
+#0 7205.1           |     ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:446:6: error: expected primary-expression before ‘<’ token
+#0 7205.1       446 |    <<<grid, block, 0, at::cuda::getCurrentCUDAStream(curDevice)>>>(    \
+#0 7205.1           |      ^
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:456:7: note: in expansion of macro ‘HANDLE_CASE’
+#0 7205.1       456 |       HANDLE_CASE(TYPE, A, 2);              \
+#0 7205.1           |       ^~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:473:7: note: in expansion of macro ‘HANDLE_B_CASE’
+#0 7205.1       473 |       HANDLE_B_CASE(TYPE, -1, B);           \
+#0 7205.1           |       ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:489:5: note: in expansion of macro ‘HANDLE_A_CASE’
+#0 7205.1       489 |     HANDLE_A_CASE(unsigned int, aInfo.dims, bInfo.dims);
+#0 7205.1           |     ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:446:66: error: expected primary-expression before ‘>’ token
+#0 7205.1       446 |    <<<grid, block, 0, at::cuda::getCurrentCUDAStream(curDevice)>>>(    \
+#0 7205.1           |                                                                  ^
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:456:7: note: in expansion of macro ‘HANDLE_CASE’
+#0 7205.1       456 |       HANDLE_CASE(TYPE, A, 2);              \
+#0 7205.1           |       ^~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:473:7: note: in expansion of macro ‘HANDLE_B_CASE’
+#0 7205.1       473 |       HANDLE_B_CASE(TYPE, -1, B);           \
+#0 7205.1           |       ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:489:5: note: in expansion of macro ‘HANDLE_A_CASE’
+#0 7205.1       489 |     HANDLE_A_CASE(unsigned int, aInfo.dims, bInfo.dims);
+#0 7205.1           |     ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:446:6: error: expected primary-expression before ‘<’ token
+#0 7205.1       446 |    <<<grid, block, 0, at::cuda::getCurrentCUDAStream(curDevice)>>>(    \
+#0 7205.1           |      ^
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:459:7: note: in expansion of macro ‘HANDLE_CASE’
+#0 7205.1       459 |       HANDLE_CASE(TYPE, A, -1);             \
+#0 7205.1           |       ^~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:473:7: note: in expansion of macro ‘HANDLE_B_CASE’
+#0 7205.1       473 |       HANDLE_B_CASE(TYPE, -1, B);           \
+#0 7205.1           |       ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:489:5: note: in expansion of macro ‘HANDLE_A_CASE’
+#0 7205.1       489 |     HANDLE_A_CASE(unsigned int, aInfo.dims, bInfo.dims);
+#0 7205.1           |     ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:446:66: error: expected primary-expression before ‘>’ token
+#0 7205.1       446 |    <<<grid, block, 0, at::cuda::getCurrentCUDAStream(curDevice)>>>(    \
+#0 7205.1           |                                                                  ^
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:459:7: note: in expansion of macro ‘HANDLE_CASE’
+#0 7205.1       459 |       HANDLE_CASE(TYPE, A, -1);             \
+#0 7205.1           |       ^~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:473:7: note: in expansion of macro ‘HANDLE_B_CASE’
+#0 7205.1       473 |       HANDLE_B_CASE(TYPE, -1, B);           \
+#0 7205.1           |       ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:489:5: note: in expansion of macro ‘HANDLE_A_CASE’
+#0 7205.1       489 |     HANDLE_A_CASE(unsigned int, aInfo.dims, bInfo.dims);
+#0 7205.1           |     ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:446:6: error: expected primary-expression before ‘<’ token
+#0 7205.1       446 |    <<<grid, block, 0, at::cuda::getCurrentCUDAStream(curDevice)>>>(    \
+#0 7205.1           |      ^
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:505:7: note: in expansion of macro ‘HANDLE_CASE’
+#0 7205.1       505 |       HANDLE_CASE(uint64_t, 1, 1);
+#0 7205.1           |       ^~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:446:66: error: expected primary-expression before ‘>’ token
+#0 7205.1       446 |    <<<grid, block, 0, at::cuda::getCurrentCUDAStream(curDevice)>>>(    \
+#0 7205.1           |                                                                  ^
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:505:7: note: in expansion of macro ‘HANDLE_CASE’
+#0 7205.1       505 |       HANDLE_CASE(uint64_t, 1, 1);
+#0 7205.1           |       ^~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:446:6: error: expected primary-expression before ‘<’ token
+#0 7205.1       446 |    <<<grid, block, 0, at::cuda::getCurrentCUDAStream(curDevice)>>>(    \
+#0 7205.1           |      ^
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:507:7: note: in expansion of macro ‘HANDLE_CASE’
+#0 7205.1       507 |       HANDLE_CASE(uint64_t, -1, -1);
+#0 7205.1           |       ^~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:446:66: error: expected primary-expression before ‘>’ token
+#0 7205.1       446 |    <<<grid, block, 0, at::cuda::getCurrentCUDAStream(curDevice)>>>(    \
+#0 7205.1           |                                                                  ^
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:507:7: note: in expansion of macro ‘HANDLE_CASE’
+#0 7205.1       507 |       HANDLE_CASE(uint64_t, -1, -1);
+#0 7205.1           |       ^~~~~~~~~~~
+#0 7205.1     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/THC/THCDeviceUtils.cuh:3,
+#0 7205.1                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:10:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/DeviceUtils.cuh: In function ‘unsigned int ACTIVE_MASK()’:        
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/DeviceUtils.cuh:10:12: error: ‘__activemask’ was not declared in this scope
+#0 7205.1        10 |     return __activemask();
+#0 7205.1           |            ^~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/DeviceUtils.cuh: In function ‘unsigned int WARP_BALLOT(int, unsigned int)’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/DeviceUtils.cuh:26:12: error: ‘__ballot_sync’ was not declared in this scope
+#0 7205.1        26 |     return __ballot_sync(mask, predicate);
+#0 7205.1           |            ^~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/DeviceUtils.cuh: At global scope:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/DeviceUtils.cuh:34:79: error: ‘warpSize’ was not declared in this scope
+#0 7205.1        34 | __device__ __forceinline__ T WARP_SHFL_XOR(T value, int laneMask, int width = warpSize, unsigned int mask = 0xffffffff)  
+#0 7205.1           |                                                                               ^~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/DeviceUtils.cuh:44:74: error: ‘warpSize’ was not declared in this scope
+#0 7205.1        44 | __device__ __forceinline__ T WARP_SHFL(T value, int srcLane, int width = warpSize, unsigned int mask = 0xffffffff)       
+#0 7205.1           |                                                                          ^~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/DeviceUtils.cuh:54:84: error: ‘warpSize’ was not declared in this scope
+#0 7205.1        54 | __device__ __forceinline__ T WARP_SHFL_UP(T value, unsigned int delta, int width = warpSize, unsigned int mask = 0xffffffff)
+#0 7205.1           |                                                                                    ^~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/DeviceUtils.cuh:64:86: error: ‘warpSize’ was not declared in this scope
+#0 7205.1        64 | __device__ __forceinline__ T WARP_SHFL_DOWN(T value, unsigned int delta, int width = warpSize, unsigned int mask = 0xffffffff)
+#0 7205.1           |                                                                                      ^~~~~~~~
+#0 7205.1     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/THC/THCDeviceUtils.cuh:3,
+#0 7205.1                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:10:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/DeviceUtils.cuh:92:114: error: ‘warpSize’ was not declared in this scope
+#0 7205.1        92 | __device__ __forceinline__ c10::complex<T> WARP_SHFL_DOWN(c10::complex<T> value, unsigned int delta, int width = warpSize, unsigned int mask = 0xffffffff)
+#0 7205.1           |                                                                                                                  ^~~~~~~~
+#0 7205.1     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp: In function ‘int voxel_query_wrapper_stack(int, int, int, int, int, float, int, int, int, at::Tensor, at::Tensor, at::Tensor, at::Tensor, at::Tensor)’:
+#0 7205.1     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:22:15: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+#0 7205.1        22 |   if (!x.type().is_cuda()) { \
+#0 7205.1           |               ^
+#0 7205.1     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:33:24: note: in expansion of macro ‘CHECK_CUDA’   
+#0 7205.1        33 | #define CHECK_INPUT(x) CHECK_CUDA(x);CHECK_CONTIGUOUS(x)
+#0 7205.1           |                        ^~~~~~~~~~
+#0 7205.1     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:39:5: note: in expansion of macro ‘CHECK_INPUT’   
+#0 7205.1        39 |     CHECK_INPUT(new_coords_tensor);
+#0 7205.1           |     ^~~~~~~~~~~
+#0 7205.1     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,   
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,    
+#0 7205.1                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:1:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:216:30: note: declared here
+#0 7205.1       216 |   DeprecatedTypeProperties & type() const {
+#0 7205.1           |                              ^~~~
+#0 7205.1     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:22:15: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+#0 7205.1        22 |   if (!x.type().is_cuda()) { \
+#0 7205.1           |               ^
+#0 7205.1     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:33:24: note: in expansion of macro ‘CHECK_CUDA’   
+#0 7205.1        33 | #define CHECK_INPUT(x) CHECK_CUDA(x);CHECK_CONTIGUOUS(x)
+#0 7205.1           |                        ^~~~~~~~~~
+#0 7205.1     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:40:5: note: in expansion of macro ‘CHECK_INPUT’   
+#0 7205.1        40 |     CHECK_INPUT(point_indices_tensor);
+#0 7205.1           |     ^~~~~~~~~~~
+#0 7205.1     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,   
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,    
+#0 7205.1                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:1:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:216:30: note: declared here
+#0 7205.1       216 |   DeprecatedTypeProperties & type() const {
+#0 7205.1           |                              ^~~~
+#0 7205.1     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:22:15: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+#0 7205.1        22 |   if (!x.type().is_cuda()) { \
+#0 7205.1           |               ^
+#0 7205.1     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:33:24: note: in expansion of macro ‘CHECK_CUDA’   
+#0 7205.1        33 | #define CHECK_INPUT(x) CHECK_CUDA(x);CHECK_CONTIGUOUS(x)
+#0 7205.1           |                        ^~~~~~~~~~
+#0 7205.1     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:41:5: note: in expansion of macro ‘CHECK_INPUT’   
+#0 7205.1        41 |     CHECK_INPUT(new_xyz_tensor);
+#0 7205.1           |     ^~~~~~~~~~~
+#0 7205.1     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,   
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,    
+#0 7205.1                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:1:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:216:30: note: declared here
+#0 7205.1       216 |   DeprecatedTypeProperties & type() const {
+#0 7205.1           |                              ^~~~
+#0 7205.1     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:22:15: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+#0 7205.1        22 |   if (!x.type().is_cuda()) { \
+#0 7205.1           |               ^
+#0 7205.1     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:33:24: note: in expansion of macro ‘CHECK_CUDA’   
+#0 7205.1        33 | #define CHECK_INPUT(x) CHECK_CUDA(x);CHECK_CONTIGUOUS(x)
+#0 7205.1           |                        ^~~~~~~~~~
+#0 7205.1     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:42:5: note: in expansion of macro ‘CHECK_INPUT’   
+#0 7205.1        42 |     CHECK_INPUT(xyz_tensor);
+#0 7205.1           |     ^~~~~~~~~~~
+#0 7205.1     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,   
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,    
+#0 7205.1                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:1:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:216:30: note: declared here
+#0 7205.1       216 |   DeprecatedTypeProperties & type() const {
+#0 7205.1           |                              ^~~~
+#0 7205.1     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:44:55: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 7205.1        44 |     const float *new_xyz = new_xyz_tensor.data<float>();
+#0 7205.1           |                                                       ^
+#0 7205.1     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,   
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,    
+#0 7205.1                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:1:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 7205.1       238 |   T * data() const {
+#0 7205.1           |       ^~~~
+#0 7205.1     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:45:47: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 7205.1        45 |     const float *xyz = xyz_tensor.data<float>();
+#0 7205.1           |                                               ^
+#0 7205.1     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,   
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,    
+#0 7205.1                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:1:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 7205.1       238 |   T * data() const {
+#0 7205.1           |       ^~~~
+#0 7205.1     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:46:57: warning: ‘T* at::Tensor::data() const [with T = int]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 7205.1        46 |     const int *new_coords = new_coords_tensor.data<int>();
+#0 7205.1           |                                                         ^
+#0 7205.1     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,   
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,    
+#0 7205.1                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:1:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 7205.1       238 |   T * data() const {
+#0 7205.1           |       ^~~~
+#0 7205.1     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:47:63: warning: ‘T* at::Tensor::data() const [with T = int]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 7205.1        47 |     const int *point_indices = point_indices_tensor.data<int>();
+#0 7205.1           |                                                               ^
+#0 7205.1     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,   
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,    
+#0 7205.1                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:1:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 7205.1       238 |   T * data() const {
+#0 7205.1           |       ^~~~
+#0 7205.1     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:48:37: warning: ‘T* at::Tensor::data() const [with T = int]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 7205.1        48 |     int *idx = idx_tensor.data<int>();
+#0 7205.1           |                                     ^
+#0 7205.1     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,   
+#0 7205.1                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,    
+#0 7205.1                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:1:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 7205.1       238 |   T * data() const {
+#0 7205.1           |       ^~~~
+#0 7205.1     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/CUDAApplyUtils.cuh:7,
+#0 7205.1                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:7:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh: In instantiation of ‘void AtomicAddIntegerImpl<T, 1>::operator()(T*, T, const func_t&) [with func_t = gpuAtomicAdd(bool*, bool)::<lambda(bool, bool)>; T = bool]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:171:1:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:99:22: error: ‘atomicCAS’ was not declared in this scope; did you mean ‘atomicAdd’?
+#0 7205.1        99 |       old = atomicCAS(address_as_ui, assumed, newval);                                                                 \ 
+#0 7205.1           |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:170:1: note: in expansion of macro ‘ATOMIC_INTEGER_IMPL’
+#0 7205.1       170 | ATOMIC_INTEGER_IMPL(Add)
+#0 7205.1           | ^~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh: In instantiation of ‘void AtomicAddIntegerImpl<T, 1>::operator()(T*, T, const func_t&) [with func_t = gpuAtomicAdd(uint8_t*, uint8_t)::<lambda(uint8_t, uint8_t)>; T = unsigned char]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:179:53:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:99:22: error: ‘atomicCAS’ was not declared in this scope; did you mean ‘atomicAdd’?
+#0 7205.1        99 |       old = atomicCAS(address_as_ui, assumed, newval);                                                                 \ 
+#0 7205.1           |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:170:1: note: in expansion of macro ‘ATOMIC_INTEGER_IMPL’
+#0 7205.1       170 | ATOMIC_INTEGER_IMPL(Add)
+#0 7205.1           | ^~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh: In instantiation of ‘void AtomicAddIntegerImpl<T, 1>::operator()(T*, T, const func_t&) [with func_t = gpuAtomicAdd(int8_t*, int8_t)::<lambda(int8_t, int8_t)>; T = signed char]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:187:51:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:99:22: error: ‘atomicCAS’ was not declared in this scope; did you mean ‘atomicAdd’?
+#0 7205.1        99 |       old = atomicCAS(address_as_ui, assumed, newval);                                                                 \ 
+#0 7205.1           |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:170:1: note: in expansion of macro ‘ATOMIC_INTEGER_IMPL’
+#0 7205.1       170 | ATOMIC_INTEGER_IMPL(Add)
+#0 7205.1           | ^~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh: In instantiation of ‘void AtomicAddIntegerImpl<T, 2>::operator()(T*, T, const func_t&) [with func_t = gpuAtomicAdd(int16_t*, int16_t)::<lambda(int16_t, int16_t)>; T = short int]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:195:53:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:121:22: error: ‘atomicCAS’ was not declared in this scope; did you mean ‘atomicAdd’?
+#0 7205.1       121 |       old = atomicCAS(address_as_ui, assumed, newval);                                                                 \ 
+#0 7205.1           |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:170:1: note: in expansion of macro ‘ATOMIC_INTEGER_IMPL’
+#0 7205.1       170 | ATOMIC_INTEGER_IMPL(Add)
+#0 7205.1           | ^~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh: In instantiation of ‘void AtomicAddIntegerImpl<T, 8>::operator()(T*, T, const func_t&) [with func_t = gpuAtomicAdd(int64_t*, int64_t)::<lambda(int64_t, int64_t)>; T = long int]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:210:53:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:155:22: error: ‘atomicCAS’ was not declared in this scope; did you mean ‘atomicAdd’?
+#0 7205.1       155 |       old = atomicCAS(address_as_ui, assumed, newval);                                                                 \ 
+#0 7205.1           |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:170:1: note: in expansion of macro ‘ATOMIC_INTEGER_IMPL’
+#0 7205.1       170 | ATOMIC_INTEGER_IMPL(Add)
+#0 7205.1           | ^~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh: In instantiation of ‘void AtomicMulIntegerImpl<T, 1>::operator()(T*, T, const func_t&) [with func_t = gpuAtomicMul(uint8_t*, uint8_t)::<lambda(uint8_t, uint8_t)>; T = unsigned char]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:348:1:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:99:22: error: ‘atomicCAS’ was not declared in this scope; did you mean ‘atomicAdd’?
+#0 7205.1        99 |       old = atomicCAS(address_as_ui, assumed, newval);                                                                 \ 
+#0 7205.1           |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:347:1: note: in expansion of macro ‘ATOMIC_INTEGER_IMPL’
+#0 7205.1       347 | ATOMIC_INTEGER_IMPL(Mul)
+#0 7205.1           | ^~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh: In instantiation of ‘void AtomicMulIntegerImpl<T, 1>::operator()(T*, T, const func_t&) [with func_t = gpuAtomicMul(int8_t*, int8_t)::<lambda(int8_t, int8_t)>; T = signed char]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:349:1:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:99:22: error: ‘atomicCAS’ was not declared in this scope; did you mean ‘atomicAdd’?
+#0 7205.1        99 |       old = atomicCAS(address_as_ui, assumed, newval);                                                                 \ 
+#0 7205.1           |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:347:1: note: in expansion of macro ‘ATOMIC_INTEGER_IMPL’
+#0 7205.1       347 | ATOMIC_INTEGER_IMPL(Mul)
+#0 7205.1           | ^~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh: In instantiation of ‘void AtomicMulIntegerImpl<T, 2>::operator()(T*, T, const func_t&) [with func_t = gpuAtomicMul(int16_t*, int16_t)::<lambda(int16_t, int16_t)>; T = short int]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:350:1:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:121:22: error: ‘atomicCAS’ was not declared in this scope; did you mean ‘atomicAdd’?
+#0 7205.1       121 |       old = atomicCAS(address_as_ui, assumed, newval);                                                                 \ 
+#0 7205.1           |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:347:1: note: in expansion of macro ‘ATOMIC_INTEGER_IMPL’
+#0 7205.1       347 | ATOMIC_INTEGER_IMPL(Mul)
+#0 7205.1           | ^~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh: In instantiation of ‘void AtomicMulIntegerImpl<T, 4>::operator()(T*, T, const func_t&) [with func_t = gpuAtomicMul(int32_t*, int32_t)::<lambda(int32_t, int32_t)>; T = int]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:351:1:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:138:22: error: ‘atomicCAS’ was not declared in this scope; did you mean ‘atomicAdd’?
+#0 7205.1       138 |       old = atomicCAS(address_as_ui, assumed, newval);                                                                 \ 
+#0 7205.1           |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:347:1: note: in expansion of macro ‘ATOMIC_INTEGER_IMPL’
+#0 7205.1       347 | ATOMIC_INTEGER_IMPL(Mul)
+#0 7205.1           | ^~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh: In instantiation of ‘void AtomicMulIntegerImpl<T, 8>::operator()(T*, T, const func_t&) [with func_t = gpuAtomicMul(int64_t*, int64_t)::<lambda(int64_t, int64_t)>; T = long int]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:352:1:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:155:22: error: ‘atomicCAS’ was not declared in this scope; did you mean ‘atomicAdd’?
+#0 7205.1       155 |       old = atomicCAS(address_as_ui, assumed, newval);                                                                 \ 
+#0 7205.1           |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:347:1: note: in expansion of macro ‘ATOMIC_INTEGER_IMPL’
+#0 7205.1       347 | ATOMIC_INTEGER_IMPL(Mul)
+#0 7205.1           | ^~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh: In instantiation of ‘c10::Half AtomicFPOp<c10::Half>::operator()(c10::Half*, c10::Half, const func_t&) [with func_t = gpuAtomicMul(c10::Half*, c10::Half)::<lambda(c10::Half, c10::Half)>]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:358:34:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:31:22: error: ‘atomicCAS’ was not declared in this scope; did you mean ‘atomicAdd’?
+#0 7205.1        31 |       old = atomicCAS(address_as_ui, assumed, old);
+#0 7205.1           |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1           |             atomicAdd
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh: In instantiation of ‘c10::BFloat16 AtomicFPOp<c10::BFloat16>::operator()(c10::BFloat16*, c10::BFloat16, const func_t&) [with func_t = gpuAtomicMul(c10::BFloat16*, c10::BFloat16)::<lambda(c10::BFloat16, c10::BFloat16)>]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:365:38:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:53:22: error: ‘atomicCAS’ was not declared in this scope; did you mean ‘atomicAdd’?
+#0 7205.1        53 |       old = atomicCAS(address_as_ui, assumed, old);
+#0 7205.1           |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1           |             atomicAdd
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh: In instantiation of ‘double AtomicFPOp<double>::operator()(double*, double, const func_t&) [with func_t = gpuAtomicMul(double*, double)::<lambda(double, long long unsigned int)>]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:372:32:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:70:22: error: ‘atomicCAS’ was not declared in this scope; did you mean ‘atomicAdd’?
+#0 7205.1        70 |       old = atomicCAS(address_as_ull, assumed, func(val, assumed));
+#0 7205.1           |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1           |             atomicAdd
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:74:32: error: ‘__longlong_as_double’ was not declared in this scope
+#0 7205.1        74 |     return __longlong_as_double(old);
+#0 7205.1           |            ~~~~~~~~~~~~~~~~~~~~^~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh: In instantiation of ‘void AtomicMaxIntegerImpl<T, 1>::operator()(T*, T, const func_t&) [with func_t = gpuAtomicMax(uint8_t*, uint8_t)::<lambda(uint8_t, uint8_t)>; T = unsigned char]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:409:1:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:99:22: error: ‘atomicCAS’ was not declared in this scope; did you mean ‘atomicAdd’?
+#0 7205.1        99 |       old = atomicCAS(address_as_ui, assumed, newval);                                                                 \ 
+#0 7205.1           |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:408:1: note: in expansion of macro ‘ATOMIC_INTEGER_IMPL’
+#0 7205.1       408 | ATOMIC_INTEGER_IMPL(Max)
+#0 7205.1           | ^~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh: In instantiation of ‘void AtomicMaxIntegerImpl<T, 1>::operator()(T*, T, const func_t&) [with func_t = gpuAtomicMax(int8_t*, int8_t)::<lambda(int8_t, int8_t)>; T = signed char]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:410:1:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:99:22: error: ‘atomicCAS’ was not declared in this scope; did you mean ‘atomicAdd’?
+#0 7205.1        99 |       old = atomicCAS(address_as_ui, assumed, newval);                                                                 \ 
+#0 7205.1           |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:408:1: note: in expansion of macro ‘ATOMIC_INTEGER_IMPL’
+#0 7205.1       408 | ATOMIC_INTEGER_IMPL(Max)
+#0 7205.1           | ^~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh: In instantiation of ‘void AtomicMaxIntegerImpl<T, 2>::operator()(T*, T, const func_t&) [with func_t = gpuAtomicMax(int16_t*, int16_t)::<lambda(int16_t, int16_t)>; T = short int]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:411:1:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:121:22: error: ‘atomicCAS’ was not declared in this scope; did you mean ‘atomicAdd’?
+#0 7205.1       121 |       old = atomicCAS(address_as_ui, assumed, newval);                                                                 \ 
+#0 7205.1           |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:408:1: note: in expansion of macro ‘ATOMIC_INTEGER_IMPL’
+#0 7205.1       408 | ATOMIC_INTEGER_IMPL(Max)
+#0 7205.1           | ^~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh: In instantiation of ‘void AtomicMaxIntegerImpl<T, 4>::operator()(T*, T, const func_t&) [with func_t = gpuAtomicMax(int32_t*, int32_t)::<lambda(int32_t, int32_t)>; T = int]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:412:1:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:138:22: error: ‘atomicCAS’ was not declared in this scope; did you mean ‘atomicAdd’?
+#0 7205.1       138 |       old = atomicCAS(address_as_ui, assumed, newval);                                                                 \ 
+#0 7205.1           |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:408:1: note: in expansion of macro ‘ATOMIC_INTEGER_IMPL’
+#0 7205.1       408 | ATOMIC_INTEGER_IMPL(Max)
+#0 7205.1           | ^~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh: In instantiation of ‘void AtomicMaxIntegerImpl<T, 8>::operator()(T*, T, const func_t&) [with func_t = gpuAtomicMax(int64_t*, int64_t)::<lambda(int64_t, int64_t)>; T = long int]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:413:1:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:155:22: error: ‘atomicCAS’ was not declared in this scope; did you mean ‘atomicAdd’?
+#0 7205.1       155 |       old = atomicCAS(address_as_ui, assumed, newval);                                                                 \ 
+#0 7205.1           |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:408:1: note: in expansion of macro ‘ATOMIC_INTEGER_IMPL’
+#0 7205.1       408 | ATOMIC_INTEGER_IMPL(Max)
+#0 7205.1           | ^~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh: In instantiation of ‘c10::Half AtomicFPOp<c10::Half>::operator()(c10::Half*, c10::Half, const func_t&) [with func_t = gpuAtomicMax(c10::Half*, c10::Half)::<lambda(c10::Half, c10::Half)>]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:419:34:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:31:22: error: ‘atomicCAS’ was not declared in this scope; did you mean ‘atomicAdd’?
+#0 7205.1        31 |       old = atomicCAS(address_as_ui, assumed, old);
+#0 7205.1           |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1           |             atomicAdd
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh: In instantiation of ‘c10::BFloat16 AtomicFPOp<c10::BFloat16>::operator()(c10::BFloat16*, c10::BFloat16, const func_t&) [with func_t = gpuAtomicMax(c10::BFloat16*, c10::BFloat16)::<lambda(c10::BFloat16, c10::BFloat16)>]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:426:38:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:53:22: error: ‘atomicCAS’ was not declared in this scope; did you mean ‘atomicAdd’?
+#0 7205.1        53 |       old = atomicCAS(address_as_ui, assumed, old);
+#0 7205.1           |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1           |             atomicAdd
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh: In instantiation of ‘double AtomicFPOp<double>::operator()(double*, double, const func_t&) [with func_t = gpuAtomicMax(double*, double)::<lambda(double, long long unsigned int)>]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:433:32:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:70:22: error: ‘atomicCAS’ was not declared in this scope; did you mean ‘atomicAdd’?
+#0 7205.1        70 |       old = atomicCAS(address_as_ull, assumed, func(val, assumed));
+#0 7205.1           |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1           |             atomicAdd
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:74:32: error: ‘__longlong_as_double’ was not declared in this scope
+#0 7205.1        74 |     return __longlong_as_double(old);
+#0 7205.1           |            ~~~~~~~~~~~~~~~~~~~~^~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh: In instantiation of ‘void AtomicMinIntegerImpl<T, 1>::operator()(T*, T, const func_t&) [with func_t = gpuAtomicMin(uint8_t*, uint8_t)::<lambda(uint8_t, uint8_t)>; T = unsigned char]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:469:1:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:99:22: error: ‘atomicCAS’ was not declared in this scope; did you mean ‘atomicAdd’?
+#0 7205.1        99 |       old = atomicCAS(address_as_ui, assumed, newval);                                                                 \ 
+#0 7205.1           |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:468:1: note: in expansion of macro ‘ATOMIC_INTEGER_IMPL’
+#0 7205.1       468 | ATOMIC_INTEGER_IMPL(Min)
+#0 7205.1           | ^~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh: In instantiation of ‘void AtomicMinIntegerImpl<T, 1>::operator()(T*, T, const func_t&) [with func_t = gpuAtomicMin(int8_t*, int8_t)::<lambda(int8_t, int8_t)>; T = signed char]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:470:1:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:99:22: error: ‘atomicCAS’ was not declared in this scope; did you mean ‘atomicAdd’?
+#0 7205.1        99 |       old = atomicCAS(address_as_ui, assumed, newval);                                                                 \ 
+#0 7205.1           |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:468:1: note: in expansion of macro ‘ATOMIC_INTEGER_IMPL’
+#0 7205.1       468 | ATOMIC_INTEGER_IMPL(Min)
+#0 7205.1           | ^~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh: In instantiation of ‘void AtomicMinIntegerImpl<T, 2>::operator()(T*, T, const func_t&) [with func_t = gpuAtomicMin(int16_t*, int16_t)::<lambda(int16_t, int16_t)>; T = short int]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:471:1:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:121:22: error: ‘atomicCAS’ was not declared in this scope; did you mean ‘atomicAdd’?
+#0 7205.1       121 |       old = atomicCAS(address_as_ui, assumed, newval);                                                                 \ 
+#0 7205.1           |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:468:1: note: in expansion of macro ‘ATOMIC_INTEGER_IMPL’
+#0 7205.1       468 | ATOMIC_INTEGER_IMPL(Min)
+#0 7205.1           | ^~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh: In instantiation of ‘void AtomicMinIntegerImpl<T, 4>::operator()(T*, T, const func_t&) [with func_t = gpuAtomicMin(int32_t*, int32_t)::<lambda(int32_t, int32_t)>; T = int]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:472:1:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:138:22: error: ‘atomicCAS’ was not declared in this scope; did you mean ‘atomicAdd’?
+#0 7205.1       138 |       old = atomicCAS(address_as_ui, assumed, newval);                                                                 \ 
+#0 7205.1           |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:468:1: note: in expansion of macro ‘ATOMIC_INTEGER_IMPL’
+#0 7205.1       468 | ATOMIC_INTEGER_IMPL(Min)
+#0 7205.1           | ^~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh: In instantiation of ‘void AtomicMinIntegerImpl<T, 8>::operator()(T*, T, const func_t&) [with func_t = gpuAtomicMin(int64_t*, int64_t)::<lambda(int64_t, int64_t)>; T = long int]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:473:1:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:155:22: error: ‘atomicCAS’ was not declared in this scope; did you mean ‘atomicAdd’?
+#0 7205.1       155 |       old = atomicCAS(address_as_ui, assumed, newval);                                                                 \ 
+#0 7205.1           |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:468:1: note: in expansion of macro ‘ATOMIC_INTEGER_IMPL’
+#0 7205.1       468 | ATOMIC_INTEGER_IMPL(Min)
+#0 7205.1           | ^~~~~~~~~~~~~~~~~~~
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh: In instantiation of ‘c10::Half AtomicFPOp<c10::Half>::operator()(c10::Half*, c10::Half, const func_t&) [with func_t = gpuAtomicMin(c10::Half*, c10::Half)::<lambda(c10::Half, c10::Half)>]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:479:34:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:31:22: error: ‘atomicCAS’ was not declared in this scope; did you mean ‘atomicAdd’?
+#0 7205.1        31 |       old = atomicCAS(address_as_ui, assumed, old);
+#0 7205.1           |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1           |             atomicAdd
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh: In instantiation of ‘c10::BFloat16 AtomicFPOp<c10::BFloat16>::operator()(c10::BFloat16*, c10::BFloat16, const func_t&) [with func_t = gpuAtomicMin(c10::BFloat16*, c10::BFloat16)::<lambda(c10::BFloat16, c10::BFloat16)>]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:486:38:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:53:22: error: ‘atomicCAS’ was not declared in this scope; did you mean ‘atomicAdd’?
+#0 7205.1        53 |       old = atomicCAS(address_as_ui, assumed, old);
+#0 7205.1           |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1           |             atomicAdd
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh: In instantiation of ‘double AtomicFPOp<double>::operator()(double*, double, const func_t&) [with func_t = gpuAtomicMin(double*, double)::<lambda(double, long long unsigned int)>]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:493:32:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:70:22: error: ‘atomicCAS’ was not declared in this scope; did you mean ‘atomicAdd’?
+#0 7205.1        70 |       old = atomicCAS(address_as_ull, assumed, func(val, assumed));
+#0 7205.1           |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1           |             atomicAdd
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/Atomic.cuh:74:32: error: ‘__longlong_as_double’ was not declared in this scope
+#0 7205.1        74 |     return __longlong_as_double(old);
+#0 7205.1           |            ~~~~~~~~~~~~~~~~~~~~^~~~~
+#0 7205.1     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/THC/THCDeviceUtils.cuh:3,
+#0 7205.1                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.cpp:10:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/DeviceUtils.cuh: In instantiation of ‘T WARP_SHFL_DOWN(T, unsigned int, int, unsigned int) [with T = short unsigned int]’:
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/DeviceUtils.cuh:88:78:   required from here
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/cuda/DeviceUtils.cuh:67:28: error: ‘__shfl_down_sync’ was not declared in this scope
+#0 7205.1        67 |     return __shfl_down_sync(mask, value, delta, width);
+#0 7205.1           |            ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0 7205.1     [9/13] c++ -MMD -MF /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_stack/src/pointnet2_api.o.d -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -I/usr/local/lib/python3.8/dist-packages/torch/include -I/usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include -I/usr/local/lib/python3.8/dist-packages/torch/include/TH -I/usr/local/lib/python3.8/dist-packages/torch/include/THC -I/usr/local/cuda/include -I/usr/include/python3.8 -c -c /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/pointnet2_api.cpp -o /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_stack/src/pointnet2_api.o -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1013"' -DTORCH_EXTENSION_NAME=pointnet2_stack_cuda -D_GLIBCXX_USE_CXX11_ABI=1 -std=c++14
+#0 7205.1     [10/13] /usr/local/cuda/bin/nvcc  -I/usr/local/lib/python3.8/dist-packages/torch/include -I/usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include -I/usr/local/lib/python3.8/dist-packages/torch/include/TH -I/usr/local/lib/python3.8/dist-packages/torch/include/THC -I/usr/local/cuda/include -I/usr/include/python3.8 -c -c /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/group_points_gpu.cu -o /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_stack/src/group_points_gpu.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1013"' -DTORCH_EXTENSION_NAME=pointnet2_stack_cuda -D_GLIBCXX_USE_CXX11_ABI=1 -gencode=arch=compute_61,code=compute_61 -gencode=arch=compute_61,code=sm_61 -std=c++14
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/c10/util/irange.h(54): warning: pointless comparison of unsigned integer with zero
+#0 7205.1               detected during:
+#0 7205.1                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator==(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=size_t, one_sided=false, <unnamed>=0]"
+#0 7205.1     (61): here
+#0 7205.1                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator!=(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=size_t, one_sided=false, <unnamed>=0]"
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/c10/core/TensorImpl.h(77): here
+#0 7205.1
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/c10/util/irange.h(54): warning: pointless comparison of unsigned integer with zero
+#0 7205.1               detected during:
+#0 7205.1                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator==(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=std::size_t, one_sided=true, <unnamed>=0]"
+#0 7205.1     (61): here
+#0 7205.1                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator!=(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=std::size_t, one_sided=true, <unnamed>=0]"
+#0 7205.1     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/qualified_name.h(73): here
+#0 7205.1
+#0 7205.1     ninja: build stopped: subcommand failed.
+#0 7205.1     Traceback (most recent call last):
+#0 7205.1       File "/usr/local/lib/python3.8/dist-packages/torch/utils/cpp_extension.py", line 1890, in _run_ninja_build
+#0 7205.1         subprocess.run(
+#0 7205.1       File "/usr/lib/python3.8/subprocess.py", line 516, in run
+#0 7205.1         raise CalledProcessError(retcode, process.args,
+#0 7205.1     subprocess.CalledProcessError: Command '['ninja', '-v']' returned non-zero exit status 1.
+#0 7205.1
+#0 7205.1     The above exception was the direct cause of the following exception:
+#0 7205.1
+#0 7205.1     Traceback (most recent call last):
+#0 7205.1       File "<string>", line 1, in <module>
+#0 7205.1       File "/home/dsgn2/DSGN2_fork/setup.py", line 31, in <module>
+#0 7205.1         setup(
+#0 7205.1       File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 144, in setup
+#0 7205.1         return distutils.core.setup(**attrs)
+#0 7205.1       File "/usr/lib/python3.8/distutils/core.py", line 148, in setup
+#0 7205.1         dist.run_commands()
+#0 7205.1       File "/usr/lib/python3.8/distutils/dist.py", line 966, in run_commands
+#0 7205.1         self.run_command(cmd)
+#0 7205.1       File "/usr/lib/python3.8/distutils/dist.py", line 985, in run_command
+#0 7205.1         cmd_obj.run()
+#0 7205.1       File "/usr/lib/python3/dist-packages/setuptools/command/develop.py", line 38, in run
+#0 7205.1         self.install_for_development()
+#0 7205.1       File "/usr/lib/python3/dist-packages/setuptools/command/develop.py", line 140, in install_for_development
+#0 7205.1         self.run_command('build_ext')
+#0 7205.1       File "/usr/lib/python3.8/distutils/cmd.py", line 313, in run_command
+#0 7205.1         self.distribution.run_command(command)
+#0 7205.1       File "/usr/lib/python3.8/distutils/dist.py", line 985, in run_command
+#0 7205.1         cmd_obj.run()
+#0 7205.1       File "/usr/lib/python3/dist-packages/setuptools/command/build_ext.py", line 87, in run
+#0 7205.1         _build_ext.run(self)
+#0 7205.1       File "/home/dsgn2/.local/lib/python3.8/site-packages/Cython/Distutils/old_build_ext.py", line 186, in run
+#0 7205.1         _build_ext.build_ext.run(self)
+#0 7205.1       File "/usr/lib/python3.8/distutils/command/build_ext.py", line 340, in run
+#0 7205.1         self.build_extensions()
+#0 7205.1       File "/usr/local/lib/python3.8/dist-packages/torch/utils/cpp_extension.py", line 845, in build_extensions
+#0 7205.1         build_ext.build_extensions(self)
+#0 7205.1       File "/home/dsgn2/.local/lib/python3.8/site-packages/Cython/Distutils/old_build_ext.py", line 195, in build_extensions
+#0 7205.1         _build_ext.build_ext.build_extensions(self)
+#0 7205.1       File "/usr/lib/python3.8/distutils/command/build_ext.py", line 449, in build_extensions
+#0 7205.1         self._build_extensions_serial()
+#0 7205.1       File "/usr/lib/python3.8/distutils/command/build_ext.py", line 474, in _build_extensions_serial
+#0 7205.1         self.build_extension(ext)
+#0 7205.1       File "/usr/lib/python3/dist-packages/setuptools/command/build_ext.py", line 208, in build_extension
+#0 7205.1         _build_ext.build_extension(self, ext)
+#0 7205.1       File "/usr/lib/python3.8/distutils/command/build_ext.py", line 528, in build_extension
+#0 7205.1         objects = self.compiler.compile(sources,
+#0 7205.1       File "/usr/local/lib/python3.8/dist-packages/torch/utils/cpp_extension.py", line 660, in unix_wrap_ninja_compile
+#0 7205.1         _write_ninja_file_and_compile_objects(
+#0 7205.1       File "/usr/local/lib/python3.8/dist-packages/torch/utils/cpp_extension.py", line 1571, in _write_ninja_file_and_compile_objects#0 7205.1         _run_ninja_build(
+#0 7205.1       File "/usr/local/lib/python3.8/dist-packages/torch/utils/cpp_extension.py", line 1906, in _run_ninja_build
+#0 7205.1         raise RuntimeError(message) from e
+#0 7205.1     RuntimeError: Error compiling objects for extension
+#0 7205.1     ----------------------------------------
+#0 7205.6 ERROR: Command errored out with exit status 1: /usr/bin/python3 -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/home/dsgn2/DSGN2_fork/setup.py'"'"'; __file__='"'"'/home/dsgn2/DSGN2_fork/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' develop --no-deps --user --prefix= Check the logs for full command output.
+------
+failed to solve: process "/bin/bash -l -c cd /home/${USER}/DSGN2_fork/ && pip3 install -e ." did not complete successfully: exit code: 1       
+PS D:\11Important\Main_Downloads\DSGN2_fork\docker>

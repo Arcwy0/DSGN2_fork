@@ -1,5 +1,12 @@
 #include <torch/extension.h>
-
+#include <ATen/ATen.h>
+#include <ATen/TensorUtils.h>
+#include <ATen/cuda/CUDAContext.h>
+#include <c10/cuda/CUDAGuard.h>
+#include <ATen/cuda/CUDAApplyUtils.cuh>
+#include <ATen/ceil_div.h>
+#include <THC/THCAtomics.cuh>
+#include <THC/THCDeviceUtils.cuh>
 at::Tensor BuildGeometryVolume_forward_cuda(const at::Tensor &img,
                                         const at::Tensor &coord);
 

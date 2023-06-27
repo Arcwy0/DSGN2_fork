@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <ATen/ATen.h>
+#include <ATen/TensorUtils.h>
+#include <ATen/cuda/CUDAContext.h>
+#include <c10/cuda/CUDAGuard.h>
+#include <ATen/cuda/CUDAApplyUtils.cuh>
+#include <ATen/ceil_div.h>
+#include <THC/THCAtomics.cuh>
+#include <THC/THCDeviceUtils.cuh>
 #include "cuda_utils.h"
 #include "sampling_gpu.h"
 #define TOTAL_THREADS 1024

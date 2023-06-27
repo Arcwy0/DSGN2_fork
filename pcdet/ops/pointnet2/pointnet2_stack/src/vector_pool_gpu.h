@@ -15,7 +15,14 @@ All Rights Reserved 2020.
 #include <vector>
 #include <cuda.h>
 #include <cuda_runtime_api.h>
-
+#include <ATen/ATen.h>
+#include <ATen/TensorUtils.h>
+#include <ATen/cuda/CUDAContext.h>
+#include <c10/cuda/CUDAGuard.h>
+#include <ATen/cuda/CUDAApplyUtils.cuh>
+#include <ATen/ceil_div.h>
+#include <THC/THCAtomics.cuh>
+#include <THC/THCDeviceUtils.cuh>
 
 int query_stacked_local_neighbor_idxs_kernel_launcher_stack(
     const float *support_xyz, const int *xyz_batch_cnt, const float *new_xyz, const int *new_xyz_batch_cnt,

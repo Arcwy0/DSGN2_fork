@@ -5,7 +5,14 @@
 #include <cuda.h>
 #include <cuda_runtime_api.h>
 #include <vector>
-
+#include <ATen/ATen.h>
+#include <ATen/TensorUtils.h>
+#include <ATen/cuda/CUDAContext.h>
+#include <c10/cuda/CUDAGuard.h>
+#include <ATen/cuda/CUDAApplyUtils.cuh>
+#include <ATen/ceil_div.h>
+#include <THC/THCAtomics.cuh>
+#include <THC/THCDeviceUtils.cuh>
 
 int group_points_wrapper_fast(int b, int c, int n, int npoints, int nsample, 
     at::Tensor points_tensor, at::Tensor idx_tensor, at::Tensor out_tensor);

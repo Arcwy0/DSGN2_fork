@@ -2,7 +2,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <curand_kernel.h>
-
+#include <ATen/ATen.h>
+#include <ATen/TensorUtils.h>
+#include <ATen/cuda/CUDAContext.h>
+#include <c10/cuda/CUDAGuard.h>
+#include <ATen/cuda/CUDAApplyUtils.cuh>
+#include <ATen/ceil_div.h>
+#include <THC/THCAtomics.cuh>
+#include <THC/THCDeviceUtils.cuh>
 #include "voxel_query_gpu.h"
 #include "cuda_utils.h"
 

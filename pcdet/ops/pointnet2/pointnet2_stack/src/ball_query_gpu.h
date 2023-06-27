@@ -7,7 +7,14 @@ All Rights Reserved 2019-2020.
 
 #ifndef _STACK_BALL_QUERY_GPU_H
 #define _STACK_BALL_QUERY_GPU_H
-
+#include <ATen/ATen.h>
+#include <ATen/TensorUtils.h>
+#include <ATen/cuda/CUDAContext.h>
+#include <c10/cuda/CUDAGuard.h>
+#include <ATen/cuda/CUDAApplyUtils.cuh>
+#include <ATen/ceil_div.h>
+#include <THC/THCAtomics.cuh>
+#include <THC/THCDeviceUtils.cuh>
 #include <torch/serialize/tensor.h>
 #include <vector>
 #include <cuda.h>
