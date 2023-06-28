@@ -70,9 +70,10 @@ RUN export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY
 RUN echo "export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}" >> ~/.bashrc &&\
     echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}" >> ~/.bashrc
 RUN export CUDA_NVCC_EXECUTABLE=$(which nvcc)
-RUN sh -c "nvcc --version;" && python3 -c "import torch;print(torch.__version__);print(torch.cuda.is_available());" \
+RUN sh -c "nvcc --version;" && python3 -c "import torch;print('TORCHVERSION:'+torch.__version__);print(torch.cuda.is_available());" \
  && pip3 install -U Cython
 RUN cd /home/${USER}/DSGN2_fork/ && pip3 install -r requirements.txt && pip3 install -e .
+# RUN cd /home/${USER}/DSGN2_fork/ && pip3 install -r requirements.txt && pip3 install -e .
 # RUN cd /home/${USER}/DSGN2_fork/ && pip3 install -e .
 
 RUN cd /home/${USER}/
