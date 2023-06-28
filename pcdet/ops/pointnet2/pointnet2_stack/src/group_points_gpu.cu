@@ -13,8 +13,8 @@ All Rights Reserved 2019-2020.
 #include <c10/cuda/CUDAGuard.h>
 #include <ATen/cuda/CUDAApplyUtils.cuh>
 #include <ATen/ceil_div.h>
-#include <THC/THCAtomics.cuh>
-#include <THC/THCDeviceUtils.cuh>
+#include <ATen/cuda/Atomic.cuh>
+#include <ATen/cuda/DeviceUtils.cuh>
 #include "cuda_utils.h"
 #include "group_points_gpu.h"
 

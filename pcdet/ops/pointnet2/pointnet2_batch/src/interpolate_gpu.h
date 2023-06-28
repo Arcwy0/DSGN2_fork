@@ -11,8 +11,8 @@
 #include <c10/cuda/CUDAGuard.h>
 #include <ATen/cuda/CUDAApplyUtils.cuh>
 #include <ATen/ceil_div.h>
-#include <THC/THCAtomics.cuh>
-#include <THC/THCDeviceUtils.cuh>
+#include <ATen/cuda/Atomic.cuh>
+#include <ATen/cuda/DeviceUtils.cuh>
 
 void three_nn_wrapper_fast(int b, int n, int m, at::Tensor unknown_tensor, 
   at::Tensor known_tensor, at::Tensor dist2_tensor, at::Tensor idx_tensor);

@@ -1,12 +1,12 @@
 #include <torch/extension.h>
 #include <ATen/ATen.h>
+#include <ATen/cuda/Atomic.cuh>
+#include <ATen/cuda/DeviceUtils.cuh>
 #include <ATen/TensorUtils.h>
 #include <ATen/cuda/CUDAContext.h>
 #include <c10/cuda/CUDAGuard.h>
 #include <ATen/cuda/CUDAApplyUtils.cuh>
 #include <ATen/ceil_div.h>
-#include <THC/THCAtomics.cuh>
-#include <THC/THCDeviceUtils.cuh>
 
 at::Tensor BuildCostVolume_forward_cuda(const at::Tensor &left,
                                         const at::Tensor &right,

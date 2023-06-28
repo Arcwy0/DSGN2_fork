@@ -15,8 +15,8 @@ All Rights Reserved 2019-2020.
 #include <c10/cuda/CUDAGuard.h>
 #include <ATen/cuda/CUDAApplyUtils.cuh>
 #include <ATen/ceil_div.h>
-#include <THC/THCAtomics.cuh>
-#include <THC/THCDeviceUtils.cuh>
+#include <ATen/cuda/Atomic.cuh>
+#include <ATen/cuda/DeviceUtils.cuh>
 
 //#define CHECK_CUDA(x) AT_CHECK(x.type().is_cuda(), #x, " must be a CUDAtensor ")
 //#define CHECK_CONTIGUOUS(x) AT_CHECK(x.is_contiguous(), #x, " must be contiguous ")

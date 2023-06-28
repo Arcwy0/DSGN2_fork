@@ -18,8 +18,8 @@ All Rights Reserved 2019-2020.
 #include <c10/cuda/CUDAGuard.h>
 #include <ATen/cuda/CUDAApplyUtils.cuh>
 #include <ATen/ceil_div.h>
-#include <THC/THCAtomics.cuh>
-#include <THC/THCDeviceUtils.cuh>
+#include <ATen/cuda/Atomic.cuh>
+#include <ATen/cuda/DeviceUtils.cuh>
 
 int group_points_wrapper_stack(int B, int M, int C, int nsample,
     at::Tensor features_tensor, at::Tensor features_batch_cnt_tensor,

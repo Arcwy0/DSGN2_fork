@@ -11,8 +11,8 @@
 #include <c10/cuda/CUDAGuard.h>
 #include <ATen/cuda/CUDAApplyUtils.cuh>
 #include <ATen/ceil_div.h>
-#include <THC/THCAtomics.cuh>
-#include <THC/THCDeviceUtils.cuh>
+#include <ATen/cuda/Atomic.cuh>
+#include <ATen/cuda/DeviceUtils.cuh>
 
 void three_nn_wrapper_stack(at::Tensor unknown_tensor, 
     at::Tensor unknown_batch_cnt_tensor, at::Tensor known_tensor, 
