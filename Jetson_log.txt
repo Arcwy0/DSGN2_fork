@@ -1,3 +1,12 @@
+ => CACHED [21/26] RUN export LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/  0.0s
+ => CACHED [22/26] RUN echo "export PATH=/usr/local/cuda/bin:/usr/local/c  0.0s
+ => CACHED [23/26] RUN export CUDA_NVCC_EXECUTABLE=$(which nvcc)           0.0s
+ => [24/26] RUN sh -c "nvcc --version;" && python3 -c "import torch;prin  20.8s
+ => => # Build cuda_11.4.r11.4/compiler.31964100_0                             
+ => => # TORCHVERSION:2.0.0a0+ec3941ad.nv23.02                                 
+ => => # False        
+
+
 user@stereo:~/workspace/DSGN2_fork/docker$ sudo sh scripts/build.sh 
 [sudo] password for user: 
 /usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (1.26.15) or chardet (3.0.4) doesn't match a supported version!
