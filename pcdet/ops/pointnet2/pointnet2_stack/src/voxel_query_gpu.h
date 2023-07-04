@@ -9,8 +9,6 @@
 #include <ATen/cuda/CUDAContext.h>
 #include <c10/cuda/CUDAGuard.h>
 #include <ATen/ceil_div.h>
-#include <ATen/cuda/Atomic.cuh>
-#include <ATen/cuda/DeviceUtils.cuh>
 
 int voxel_query_wrapper_stack(int M, int R1, int R2, int R3, int nsample, float radius, 
     int z_range, int y_range, int x_range, at::Tensor new_xyz_tensor, at::Tensor xyz_tensor, 

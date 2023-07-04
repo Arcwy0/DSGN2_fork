@@ -13,8 +13,6 @@ All Rights Reserved 2018.
 #include <ATen/cuda/CUDAContext.h>
 #include <c10/cuda/CUDAGuard.h>
 #include <ATen/ceil_div.h>
-#include <ATen/cuda/Atomic.cuh>
-#include <ATen/cuda/DeviceUtils.cuh>
 #include "sampling_gpu.h"
 
 //extern THCState *state;

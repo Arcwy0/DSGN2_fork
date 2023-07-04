@@ -8,8 +8,6 @@
 #include <ATen/cuda/CUDAContext.h>
 #include <c10/cuda/CUDAGuard.h>
 #include <ATen/ceil_div.h>
-#include <ATen/cuda/Atomic.cuh>
-#include <ATen/cuda/DeviceUtils.cuh>
 
 int farthest_point_sampling_wrapper(int b, int n, int m,
     at::Tensor points_tensor, at::Tensor temp_tensor, at::Tensor idx_tensor);
