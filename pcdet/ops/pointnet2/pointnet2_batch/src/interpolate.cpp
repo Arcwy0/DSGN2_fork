@@ -19,6 +19,7 @@ All Rights Reserved 2018.
 #include <c10/cuda/CUDAGuard.h>
 #include <ATen/ceil_div.h>
 
+#define THREADS_PER_BLOCK 128
 //extern THCState *state;
 
 

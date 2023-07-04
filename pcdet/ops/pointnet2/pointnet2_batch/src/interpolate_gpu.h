@@ -10,6 +10,8 @@
 #include <c10/cuda/CUDAGuard.h>
 #include <ATen/ceil_div.h>
 
+#define THREADS_PER_BLOCK 128
+
 void three_nn_wrapper_fast(int b, int n, int m, at::Tensor unknown_tensor, 
   at::Tensor known_tensor, at::Tensor dist2_tensor, at::Tensor idx_tensor);
 
