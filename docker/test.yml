@@ -13,7 +13,7 @@ services:
         tty: true
         volumes:
             - type: bind
-              source: ${PRODUCTION_PATH}/../DSGN2
+              source: ${PRODUCTION_PATH}/../DSGN2_fork
               target: /home/dsgn2/
             - /dev:/dev:rw
             - /dev:/dev \

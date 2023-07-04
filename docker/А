@@ -1,0 +1,150 @@
+FROM nvcr.io/nvidia/pytorch:20.10-py3
+
+# Install dependencies
+
+#Set docker container username
+ARG USER=dsgn2
+ARG UID=1001
+ARG GID=1001
+ARG PW=user 
+USER root
+RUN useradd -m ${USER} --uid=${UID} && echo "${USER}:${PW}" | chpasswd
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        wget vim usbutils \
+        build-essential \
+        libopenblas-dev \
+	liblapack-dev \
+	libblas-dev \
+	libhdf5-serial-dev \
+	hdf5-tools \
+	libhdf5-dev \
+	zlib1g-dev \
+	zip \
+	git \
+	libjpeg8-dev \
+	protobuf-compiler \
+	libprotoc-dev \
+	llvm-9 \
+	llvm-9-dev \
+	libffi-dev \
+	libsndfile1 \
+        &&  apt install -y protobuf-compiler \
+        && rm -rf /var/lib/apt/lists/* \
+        && apt-get clean
+ENV PATH /usr/local/bin:$PATH
+ENV LANG C.UTF-8
+# # если эту переменную назвать "PIP_VERSION", то pip выдаёт ошибку: "ValueError: invalid truth value '<VERSION>'"
+# ENV PYTHON_PIP_VERSION 20.2.2
+# # https://github.com/pypa/get-pip
+# ENV PYTHON_GET_PIP_URL https://github.com/pypa/get-pip/raw/5578af97f8b2b466f4cdbebe18a3ba2d48ad1434/get-pip.py
+# ENV PYTHON_GET_PIP_SHA256 d4d62a0850fe0c2e6325b2cc20d818c580563de5a2038f917e3cb0e25280b4d1
+
+# RUN set -ex; \
+#   \
+#   savedAptMark="$(apt-mark showmanual)"; \
+#   apt-get update; \
+#   apt-get install -y --no-install-recommends wget; \
+#   \
+#   wget -O get-pip.py "$PYTHON_GET_PIP_URL"; \
+#   echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum --check --strict -; \
+#   \
+#   apt-mark auto '.*' > /dev/null; \
+#   [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; \
+#   apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; \
+#   rm -rf /var/lib/apt/lists/*; \
+#   \
+#   python get-pip.py \
+#     --disable-pip-version-check \
+#     --no-cache-dir \
+#     "pip==$PYTHON_PIP_VERSION" \
+#   ; \
+#   pip --version; \
+#   \
+#   find /usr/local -depth \
+#     \( \
+#       \( -type d -a \( -name test -o -name tests -o -name idle_test \) \) \
+#       -o \
+#       \( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) \
+#     \) -exec rm -rf '{}' +; \
+#   rm -f get-pip.py
+# RUN rm -rf /var/lib/apt/lists/* \
+#         && apt-get clean
+# WORKDIR /home/${USER}
+# USER root
+# RUN cd /home/${USER} && chown -R ${UID}:${GID} ./
+# USER ${UID}:${GID}
+
+ENV PATH="${PATH}:/home/${USER}/.local/bin"
+RUN pip3 install -U --no-cache-dir protobuf3
+RUN pip3 install -U --no-cache-dir pycocotools \
+&& pip3 install -U openmim
+RUN mim install mmcv-full
+#
+# python pip packages
+#
+RUN pip3 install --no-cache-dir --ignore-installed pybind11 
+RUN pip3 install --no-cache-dir --verbose onnx
+RUN pip3 install --no-cache-dir --verbose scipy
+RUN pip3 install --no-cache-dir --verbose scikit-learn
+RUN pip3 install --no-cache-dir --verbose pandas
+RUN pip3 install --no-cache-dir --verbose numba
+RUN pip3 install --no-cache-dir --verbose wheel
+
+# Install DSGN++
+RUN git clone https://github.com/chenyilun95/DSGN2 --branch main
+RUN cd DSGN2/mmdetection-v2.22.0/ && pip3 install -e .
+
+# Install cmake v3.26.4
+# USER root
+# RUN wget https://github.com/Kitware/CMake/releases/download/v3.26.4/cmake-3.26.4-Linux-x86_64.sh \
+#       -q -O /tmp/cmake-install.sh \
+#       && chmod u+x /tmp/cmake-install.sh \
+#       && mkdir /usr/bin/cmake \
+#       && /tmp/cmake-install.sh --skip-license --prefix=/usr/bin/cmake \
+#       && rm /tmp/cmake-install.sh
+# ENV PATH="/usr/bin/cmake/bin:${PATH}"
+
+
+RUN apt-get update && apt update && apt install libboost-dev -y \
+        && rm -rf /var/lib/apt/lists/*
+ENV PATH="${PATH}:/usr/local/bin/cmake"
+ENV PATH="${PATH}:/usr/include/boost"
+
+# RUN echo "export PATH=/usr/local/bin/cmake:$PATH" >> ~/.bashrc
+# RUN echo "export PATH=/usr/include/boost:$PATH" >> ~/.bashrc
+# RUN source ~/.bashrc
+USER ${UID}:${GID}
+# RUN git clone https://github.com/traveller59/spconv --recursive \
+#         && cd spconv \
+#         && git reset --hard f22dd9 \
+#         && git submodule update --recursive
+# ENV DEBIAN_FRONTEND noninteractive
+RUN git clone https://github.com/Arcwy0/spconv121_torch200.git
+RUN cd ./spconv121_torch200/third_party/ && git clone --recurse-submodules https://github.com/pybind/pybind11.git
+ARG TORCH_CUDA_ARCH_LIST=6.1+PTX 
+ENV FORCE_CUDA="1"
+ENV CUDA_TOOLKIT_ROOT_DIR="/usr/local/cuda/bin"
+RUN export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+RUN export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+RUN echo "export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}" >> ~/.bashrc &&\
+    echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}" >> ~/.bashrc
+RUN export CUDA_NVCC_EXECUTABLE=$(which nvcc)
+RUN cd ./spconv121_torch200 && python3 setup.py bdist_wheel
+RUN cd ./spconv121_torch200/dist && ls && pip3 install spconv-1.2.1-cp38-cp38-linux_aarch64.whl
+# Install spconv v1.0
+# RUN cd /home/${USER}
+# RUN git clone https://github.com/traveller59/spconv.git --recursive
+# RUN cd ./spconv && git checkout 8da6f967fb9a054d8870c3515b1b44eca2103634 && python3 setup.py bdist_wheel
+# RUN pip3 install -U --no-cache-dir /root/spconv/dist/spconv-1.0-cp36-cp36m-linux_x86_64.whl && \
+#     rm -rf /root/spconv
+USER ${UID}:${GID}
+RUN cd /home/${USER}
+SHELL ["/bin/bash", "-l", "-c"]
+# 6.1 for my laptop
+RUN python3 -c "import torch;print(torch.cuda.is_available());" \
+ && pip3 install -U Cython
+RUN cd /home/${USER}/DSGN2/ && pip3 install -r requirements.txt && pip3 install -e .
+# RUN cd /home/${USER}/DSGN2_fork/ && pip3 install -e .
+
+RUN cd /home/${USER}/
