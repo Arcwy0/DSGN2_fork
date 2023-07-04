@@ -11,8 +11,6 @@ All Rights Reserved 2019-2020.
 #include <ATen/cuda/CUDAContext.h>
 #include <c10/cuda/CUDAGuard.h>
 #include <ATen/ceil_div.h>
-#include <ATen/cuda/Atomic.cuh>
-#include <ATen/cuda/DeviceUtils.cuh>
 //#include <THC/THC.h>
 #include <cuda.h>
 #include <cuda_runtime_api.h>

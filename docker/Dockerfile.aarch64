@@ -7,13 +7,15 @@ ARG USER=dsgn2
 ARG UID=1001
 ARG GID=1001
 ARG PW=user 
+ARG DEBIAN_FRONTEND=noninteractive
 RUN useradd -m ${USER} --uid=${UID} && echo "${USER}:${PW}" | chpasswd
 
 RUN apt-get update && apt-get install -y \
         wget vim usbutils \
+        libgl1 \
         &&  apt install -y protobuf-compiler \
         && rm -rf /var/lib/apt/lists/*
-
+# if libgl1 won't help, install ffmpeg libsm6 libxext6
 WORKDIR /home/${USER}
 USER root
 RUN cd /home/${USER} && chown -R ${UID}:${GID} ./

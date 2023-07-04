@@ -3,13 +3,11 @@
 
 #include <torch/serialize/tensor.h>
 #include <ATen/cuda/CUDAContext.h>
-#include<vector>
+#include <vector>
 #include <ATen/ATen.h>
 #include <ATen/cuda/CUDAContext.h>
 #include <c10/cuda/CUDAGuard.h>
 #include <ATen/ceil_div.h>
-#include <ATen/cuda/Atomic.cuh>
-#include <ATen/cuda/DeviceUtils.cuh>
 
 int gather_points_wrapper_fast(int b, int c, int n, int npoints, 
     at::Tensor points_tensor, at::Tensor idx_tensor, at::Tensor out_tensor);
