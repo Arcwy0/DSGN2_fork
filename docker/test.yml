@@ -9,12 +9,18 @@ services:
         environment:
             - DISPLAY=$DISPLAY
         privileged: true
-        user: root
         tty: true
         volumes:
             - type: bind
-              source: ${PRODUCTION_PATH}/../DSGN2_fork
-              target: /home/dsgn2/
+              source: ${PRODUCTION_PATH}/../data
+              target: /home/dsgn2/DSGN2/data
             - /dev:/dev:rw
             - /dev:/dev \
         command: /bin/sh --login
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                    - driver: nvidia
+                      count: 1
+                      capabilities: [gpu]
