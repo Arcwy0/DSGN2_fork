@@ -15,7 +15,7 @@ All Rights Reserved 2018.
 #include <ATen/cuda/Atomic.cuh>
 #include <ATen/cuda/DeviceUtils.cuh>
 
-#define THREADS_PER_BLOCK 512
+#define THREADS_PER_BLOCK 128
 
 
 __global__ void three_nn_kernel_fast(int b, int n, int m, const float *__restrict__ unknown, 
