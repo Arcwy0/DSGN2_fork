@@ -10,5 +10,4 @@ xhost +
 docker-compose --env-file $PRODUCTION_PATH/test.env \
     -f $PRODUCTION_PATH/test.yml \
     up $@
-    -d
 xhost -
