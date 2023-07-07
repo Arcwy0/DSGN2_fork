@@ -7,7 +7,7 @@ __pycache__
 pcdet/version.py
 outputs/
 build/
-data/
+data/kitti
 tmp/
 ckpt/*.eval/
 *.ply

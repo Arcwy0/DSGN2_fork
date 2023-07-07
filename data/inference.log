@@ -1,0 +1,608 @@
+dsgn2@docker-desktop:~/DSGN2$ NCCL_DEBUG=INFO python -m torch.distributed.launch --nproc_per_node=4 tools/test.py --launcher pytorch --workers 2     --save_to_file --cfg_file ./configs/stereo/kitti_models/dsgn2.yaml --exp_name default --tcp_port 8080 --ckpt data/dsgn2_ep58.pth --ckpt_id 58
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+INFO:pcdet.utils.common_utils:**********************Start logging**********************
+INFO:pcdet.utils.common_utils:CUDA_VISIBLE_DEVICES=ALL
+INFO:pcdet.utils.common_utils:eval output dir: /home/dsgn2/DSGN2/outputs/configs_stereo_kitti_models/dsgn2.default/eval/epoch_58/val/default
+INFO:pcdet.utils.common_utils:total_batch_size: 1
+INFO:pcdet.utils.common_utils:cfg_file         ./configs/stereo/kitti_models/dsgn2.yaml
+INFO:pcdet.utils.common_utils:batch_size       1
+INFO:pcdet.utils.common_utils:workers          2
+INFO:pcdet.utils.common_utils:exp_name         default
+INFO:pcdet.utils.common_utils:eval_tag         default
+INFO:pcdet.utils.common_utils:max_waiting_mins 30
+INFO:pcdet.utils.common_utils:save_to_file     True
+INFO:pcdet.utils.common_utils:ckpt             /home/dsgn2/DSGN2/outputs/configs_stereo_kitti_models/dsgn2.default/ckpt/checkpoint_epoch_58.pth
+INFO:pcdet.utils.common_utils:ckpt_id          58
+INFO:pcdet.utils.common_utils:start_epoch      0
+INFO:pcdet.utils.common_utils:launcher         pytorch
+INFO:pcdet.utils.common_utils:tcp_port         8080
+INFO:pcdet.utils.common_utils:local_rank       0
+INFO:pcdet.utils.common_utils:set_cfgs         None
+INFO:pcdet.utils.common_utils:trainval         False
+INFO:pcdet.utils.common_utils:imitation        2d
+INFO:pcdet.utils.common_utils:cfg.ROOT_DIR: /home/dsgn2/DSGN2
+INFO:pcdet.utils.common_utils:cfg.LOCAL_RANK: 0
+INFO:pcdet.utils.common_utils:cfg.CLASS_NAMES: ['Car', 'Pedestrian', 'Cyclist']
+INFO:pcdet.utils.common_utils:
+cfg.DATA_CONFIG = edict()
+INFO:pcdet.utils.common_utils:cfg.DATA_CONFIG.DATASET: StereoKittiDataset
+INFO:pcdet.utils.common_utils:cfg.DATA_CONFIG.DATA_PATH: ./data/kitti
+INFO:pcdet.utils.common_utils:cfg.DATA_CONFIG.FLIP: True
+INFO:pcdet.utils.common_utils:cfg.DATA_CONFIG.FORCE_FLIP: False
+INFO:pcdet.utils.common_utils:cfg.DATA_CONFIG.POINT_CLOUD_RANGE: [2, -30.4, -3, 59.6, 30.4, 1]
+INFO:pcdet.utils.common_utils:cfg.DATA_CONFIG.VOXEL_SIZE: [0.05, 0.05, 0.1]
+INFO:pcdet.utils.common_utils:cfg.DATA_CONFIG.STEREO_VOXEL_SIZE: [0.2, 0.2, 0.2]
+INFO:pcdet.utils.common_utils:
+cfg.DATA_CONFIG.DATA_SPLIT = edict()
+INFO:pcdet.utils.common_utils:cfg.DATA_CONFIG.DATA_SPLIT.train: train
+INFO:pcdet.utils.common_utils:cfg.DATA_CONFIG.DATA_SPLIT.test: val
+INFO:pcdet.utils.common_utils:
+cfg.DATA_CONFIG.INFO_PATH = edict()
+INFO:pcdet.utils.common_utils:cfg.DATA_CONFIG.INFO_PATH.train: ['kitti_infos_train.pkl']
+INFO:pcdet.utils.common_utils:cfg.DATA_CONFIG.INFO_PATH.test: ['kitti_infos_val.pkl']
+INFO:pcdet.utils.common_utils:cfg.DATA_CONFIG.USE_VAN: True
+INFO:pcdet.utils.common_utils:cfg.DATA_CONFIG.USE_PERSON_SITTING: True
+INFO:pcdet.utils.common_utils:cfg.DATA_CONFIG.FOV_POINTS_ONLY: True
+INFO:pcdet.utils.common_utils:cfg.DATA_CONFIG.BOXES_GT_IN_CAM2_VIEW: False
+INFO:pcdet.utils.common_utils:cfg.DATA_CONFIG.GENERATE_CORNER_HEATMAP: False
+INFO:pcdet.utils.common_utils:cfg.DATA_CONFIG.CAT_REFLECT_DIM: False
+INFO:pcdet.utils.common_utils:cfg.DATA_CONFIG.TRAIN_DATA_AUGMENTOR: [{'NAME': 'gt_sampling', 'ratio': 0.9, 'USE_ROAD_PLANE': True, 'DB_INFO_PATH': ['stereo_kitti_dbinfos_train.pkl'], 'PREPARE': {'filter_by_min_points': ['Car:5', 'Pedestrian:5', 'Cyclist:5'], 'filter_by_difficulty': [-1]}, 'SAMPLE_GROUPS': ['Car:7', 'Pedestrian:7', 'Cyclist:7'], 'NUM_POINT_FEATURES': 4, 'DATABASE_WITH_FAKELIDAR': False, 'REMOVE_EXTRA_WIDTH': [0.0, 0.0, 0.0], 'LIMIT_WHOLE_SCENE': True, 'filter_occlusion_overlap': 0.7, 'remove_overlapped': True}, {'NAME': 'random_flip'}, {'NAME': 'random_crop', 'MIN_REL_X': 0, 'MAX_REL_X': 0, 'MIN_REL_Y': 1.0, 'MAX_REL_Y': 1.0, 'MAX_CROP_H': 320, 'MAX_CROP_W': 1248}, {'NAME': 'filter_truncated', 'AREA_RATIO_THRESH': None, 'AREA_2D_RATIO_THRESH': None, 'GT_TRUNCATED_THRESH': 0.98}, {'NAME': 'random_world_rotation', 'WORLD_ROT_ANGLE': [-0.1, 0.1]}, {'NAME': 'random_world_scaling', 'WORLD_SCALE_RANGE': [0.97, 1.03]}]
+INFO:pcdet.utils.common_utils:cfg.DATA_CONFIG.TEST_DATA_AUGMENTOR: [{'NAME': 'random_crop', 'MIN_REL_X': 0, 'MAX_REL_X': 0, 'MIN_REL_Y': 1.0, 'MAX_REL_Y': 1.0, 'MAX_CROP_H': 320, 'MAX_CROP_W': 1248}]
+INFO:pcdet.utils.common_utils:
+cfg.DATA_CONFIG.POINT_FEATURE_ENCODING = edict()
+INFO:pcdet.utils.common_utils:cfg.DATA_CONFIG.POINT_FEATURE_ENCODING.encoding_type: absolute_coordinates_encoding
+INFO:pcdet.utils.common_utils:cfg.DATA_CONFIG.POINT_FEATURE_ENCODING.used_feature_list: ['x', 'y', 'z']
+INFO:pcdet.utils.common_utils:cfg.DATA_CONFIG.POINT_FEATURE_ENCODING.src_feature_list: ['x', 'y', 'z']
+INFO:pcdet.utils.common_utils:cfg.DATA_CONFIG.DATA_PROCESSOR: [{'NAME': 'mask_points_and_boxes_outside_range', 'REMOVE_OUTSIDE_BOXES': True}, {'NAME': 'transform_points_to_voxels', 'VOXEL_SIZE': [0.05, 0.05, 0.1], 'MAX_POINTS_PER_VOXEL': 5, 'MAX_NUMBER_OF_VOXELS': {'train': 40000, 'test': 40000}}]
+INFO:pcdet.utils.common_utils:cfg.DATA_CONFIG._BASE_CONFIG_: ./configs/stereo/dataset_configs/kitti_dataset_fused.yaml
+INFO:pcdet.utils.common_utils:cfg.DATA_CONFIG.later_flip: True
+INFO:pcdet.utils.common_utils:
+cfg.MODEL = edict()
+INFO:pcdet.utils.common_utils:cfg.MODEL.NAME: stereo
+INFO:pcdet.utils.common_utils:cfg.MODEL.SYNC_BN: True
+INFO:pcdet.utils.common_utils:
+cfg.MODEL.BACKBONE_3D = edict()
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.NAME: DSGN2Backbone
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.maxdisp: 288
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.downsample_disp: 4
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.GN: False
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.cat_img_feature: True
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.cat_right_img_feature: True
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.voxel_occupancy: False
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.front_surface_depth: True
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.num_3dconvs: 1
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.num_3dconvs_hg: 1
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.drop_psv: False
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.drop_psv_loss: True
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.squeeze_geo: True
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.geometry_volume_shift: 1
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.inv_smooth_psv: 0.1
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.inv_smooth_geo: 0.1
+INFO:pcdet.utils.common_utils:
+cfg.MODEL.BACKBONE_3D.feature_backbone = edict()
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.feature_backbone.type: ResNet
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.feature_backbone.depth: 34
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.feature_backbone.num_stages: 4
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.feature_backbone.out_indices: [0, 1, 2, 3]
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.feature_backbone.frozen_stages: -1
+INFO:pcdet.utils.common_utils:
+cfg.MODEL.BACKBONE_3D.feature_backbone.norm_cfg = edict()
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.feature_backbone.norm_cfg.type: BN
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.feature_backbone.norm_cfg.requires_grad: True
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.feature_backbone.norm_eval: False
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.feature_backbone.style: pytorch
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.feature_backbone.with_max_pool: False
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.feature_backbone.deep_stem: False
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.feature_backbone.block_with_final_relu: False
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.feature_backbone.base_channels: 64
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.feature_backbone.strides: [1, 2, 1, 1]
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.feature_backbone.dilations: [1, 1, 2, 4]
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.feature_backbone.num_channels_factor: [1, 2, 2, 2]
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.feature_backbone_pretrained: torchvision://resnet34
+INFO:pcdet.utils.common_utils:
+cfg.MODEL.BACKBONE_3D.feature_neck = edict()
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.feature_neck.GN: False
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.feature_neck.drop_psv: False
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.feature_neck.in_dims: [3, 64, 128, 128, 128]
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.feature_neck.start_level: 2
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.feature_neck.stereo_dim: [128, 96]
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.feature_neck.with_upconv: True
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.feature_neck.with_upconv_voxel: True
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.feature_neck.upconv_type: catk3
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.feature_neck.cat_img_feature: True
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.feature_neck.cat_right_img_feature: True
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.feature_neck.sem_dim: [128, 96]
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.feature_neck.with_sem_neck: True
+INFO:pcdet.utils.common_utils:
+cfg.MODEL.BACKBONE_3D.sem_neck = edict()
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.sem_neck.type: FPN
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.sem_neck.in_channels: [96]
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.sem_neck.out_channels: 64
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.sem_neck.start_level: 0
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.sem_neck.add_extra_convs: on_output
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.sem_neck.num_outs: 5
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.cost_volume: [{'type': 'concat', 'downsample': 4}]
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.cv_dim: 32
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.rpn3d_dim: 32
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.downsampled_depth_offset: 0.5
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_3D.num_hg: 0
+INFO:pcdet.utils.common_utils:
+cfg.MODEL.DENSE_HEAD_2D = edict()
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.NAME: MMDet2DHead
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.use_3d_center: True
+INFO:pcdet.utils.common_utils:
+cfg.MODEL.DENSE_HEAD_2D.cfg = edict()
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.type: ATSSAdvHead
+INFO:pcdet.utils.common_utils:
+cfg.MODEL.DENSE_HEAD_2D.cfg.norm_cfg = edict()
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.norm_cfg.type: BN
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.norm_cfg.requires_grad: True
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.reg_class_agnostic: False
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.seperate_extra_reg_branch: False
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.num_classes: 3
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.in_channels: 64
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.stacked_convs: 4
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.feat_channels: 64
+INFO:pcdet.utils.common_utils:
+cfg.MODEL.DENSE_HEAD_2D.cfg.anchor_generator = edict()
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.anchor_generator.type: AnchorGenerator
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.anchor_generator.ratios: [1.0]
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.anchor_generator.octave_base_scale: 16
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.anchor_generator.scales_per_octave: 1
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.anchor_generator.strides: [4, 8, 16, 32, 64]
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.num_extra_reg_channel: 0
+INFO:pcdet.utils.common_utils:
+cfg.MODEL.DENSE_HEAD_2D.cfg.bbox_coder = edict()
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.bbox_coder.type: DeltaXYWHBBoxCoder
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.bbox_coder.target_means: [0.0, 0.0, 0.0, 0.0]
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.bbox_coder.target_stds: [0.1, 0.1, 0.2, 0.2]
+INFO:pcdet.utils.common_utils:
+cfg.MODEL.DENSE_HEAD_2D.cfg.loss_cls = edict()
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.loss_cls.type: FocalLoss
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.loss_cls.use_sigmoid: True
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.loss_cls.gamma: 2.0
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.loss_cls.alpha: 0.25
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.loss_cls.loss_weight: 1.0
+INFO:pcdet.utils.common_utils:
+cfg.MODEL.DENSE_HEAD_2D.cfg.loss_bbox = edict()
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.loss_bbox.type: GIoULoss
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.loss_bbox.loss_weight: 2.0
+INFO:pcdet.utils.common_utils:
+cfg.MODEL.DENSE_HEAD_2D.cfg.loss_centerness = edict()
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.loss_centerness.type: CrossEntropyLoss
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.loss_centerness.use_sigmoid: True
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.loss_centerness.loss_weight: 1.0
+INFO:pcdet.utils.common_utils:
+cfg.MODEL.DENSE_HEAD_2D.cfg.train_cfg = edict()
+INFO:pcdet.utils.common_utils:
+cfg.MODEL.DENSE_HEAD_2D.cfg.train_cfg.assigner = edict()
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.train_cfg.assigner.type: ATSS3DCenterAssigner
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.train_cfg.assigner.topk: 9
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.train_cfg.allowed_border: -1
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.train_cfg.pos_weight: -1
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.train_cfg.append_3d_centers: True
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.train_cfg.debug: False
+INFO:pcdet.utils.common_utils:
+cfg.MODEL.DENSE_HEAD_2D.cfg.test_cfg = edict()
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.test_cfg.nms_pre: 1000
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.test_cfg.min_bbox_size: 0
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.test_cfg.score_thr: 0.05
+INFO:pcdet.utils.common_utils:
+cfg.MODEL.DENSE_HEAD_2D.cfg.test_cfg.nms = edict()
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.test_cfg.nms.type: nms
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.test_cfg.nms.iou_threshold: 0.6
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD_2D.cfg.test_cfg.max_per_img: 100
+INFO:pcdet.utils.common_utils:
+cfg.MODEL.MAP_TO_BEV = edict()
+INFO:pcdet.utils.common_utils:cfg.MODEL.MAP_TO_BEV.NAME: HeightCompression
+INFO:pcdet.utils.common_utils:cfg.MODEL.MAP_TO_BEV.NUM_BEV_FEATURES: 160
+INFO:pcdet.utils.common_utils:cfg.MODEL.MAP_TO_BEV.SPARSE_INPUT: False
+INFO:pcdet.utils.common_utils:
+cfg.MODEL.BACKBONE_2D = edict()
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_2D.NAME: HgBEVBackbone
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_2D.num_channels: 64
+INFO:pcdet.utils.common_utils:cfg.MODEL.BACKBONE_2D.GN: False
+INFO:pcdet.utils.common_utils:
+cfg.MODEL.DENSE_HEAD = edict()
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.NAME: DetHead
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.NUM_CONVS: 2
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.GN: False
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.CLASS_AGNOSTIC: False
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.USE_DIRECTION_CLASSIFIER: True
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.DIR_OFFSET: 0.78539
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.DIR_LIMIT_OFFSET: 0.0
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.NUM_DIR_BINS: 2
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.CLAMP_VALUE: 10.0
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.xyz_for_angles: True
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.hwl_for_angles: True
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.do_feature_imitation: False
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.imitation_cfg: [{'lidar_feature_layer': 'spatial_features_2d', 'stereo_feature_layer': 'spatial_features_2d', 'normalize': 'cw_scale', 'layer': 'conv2d', 'channel': 64, 'ksize': 1, 'use_relu': False, 'mode': 'inbox'}, {'lidar_feature_layer': 'volume_features', 'stereo_feature_layer': 'volume_features', 'normalize': 'cw_scale', 'layer': 'conv3d', 'channel': 32, 'ksize': 1, 'use_relu': False, 'mode': 'inbox'}]
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.ANCHOR_GENERATOR_CONFIG: [{'class_name': 'Car', 'anchor_sizes': [[3.9, 1.6, 1.56]], 'anchor_rotations': [0, 1.57], 'anchor_bottom_heights': [-1.78], 'align_center': False, 'feature_map_stride': 1, 'matched_threshold': 0.6, 'unmatched_threshold': 0.45}, {'class_name': 'Pedestrian', 'anchor_sizes': [[0.8, 0.6, 1.73]], 'anchor_rotations': [0, 1.57], 'anchor_bottom_heights': [-0.6], 'align_center': False, 'feature_map_stride': 1, 'matched_threshold': 0.5, 'unmatched_threshold': 0.35}, {'class_name': 'Cyclist', 'anchor_sizes': [[1.76, 0.6, 1.73]], 'anchor_rotations': [0, 1.57], 'anchor_bottom_heights': [-0.6], 'align_center': False, 'feature_map_stride': 1, 'matched_threshold': 0.5, 'unmatched_threshold': 0.35}]
+INFO:pcdet.utils.common_utils:
+cfg.MODEL.DENSE_HEAD.TARGET_ASSIGNER_CONFIG = edict()
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.TARGET_ASSIGNER_CONFIG.NAME: AxisAlignedTargetAssigner
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.TARGET_ASSIGNER_CONFIG.POS_FRACTION: -1.0
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.TARGET_ASSIGNER_CONFIG.SAMPLE_SIZE: 512
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.TARGET_ASSIGNER_CONFIG.NORM_BY_NUM_EXAMPLES: False
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.TARGET_ASSIGNER_CONFIG.MATCH_HEIGHT: False
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.TARGET_ASSIGNER_CONFIG.BOX_CODER: ResidualCoder
+INFO:pcdet.utils.common_utils:
+cfg.MODEL.DENSE_HEAD.TARGET_ASSIGNER_CONFIG.BOX_CODER_CONFIG = edict()
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.TARGET_ASSIGNER_CONFIG.BOX_CODER_CONFIG.div_by_diagonal: True
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.TARGET_ASSIGNER_CONFIG.BOX_CODER_CONFIG.use_corners: False
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.TARGET_ASSIGNER_CONFIG.BOX_CODER_CONFIG.use_tanh: False
+INFO:pcdet.utils.common_utils:
+cfg.MODEL.DENSE_HEAD.LOSS_CONFIG = edict()
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.LOSS_CONFIG.REG_LOSS_TYPE: WeightedSmoothL1Loss
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.LOSS_CONFIG.IOU_LOSS_TYPE: IOU3dLoss
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.LOSS_CONFIG.IMITATION_LOSS_TYPE: WeightedL2WithSigmaLoss
+INFO:pcdet.utils.common_utils:
+cfg.MODEL.DENSE_HEAD.LOSS_CONFIG.LOSS_WEIGHTS = edict()
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.LOSS_CONFIG.LOSS_WEIGHTS.cls_weight: 1.0
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.LOSS_CONFIG.LOSS_WEIGHTS.loc_weight: 0.5
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.LOSS_CONFIG.LOSS_WEIGHTS.dir_weight: 0.2
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.LOSS_CONFIG.LOSS_WEIGHTS.iou_weight: 1.0
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.LOSS_CONFIG.LOSS_WEIGHTS.imitation_weight: 1.0
+INFO:pcdet.utils.common_utils:cfg.MODEL.DENSE_HEAD.LOSS_CONFIG.LOSS_WEIGHTS.code_weights: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+INFO:pcdet.utils.common_utils:
+cfg.MODEL.DEPTH_LOSS_HEAD = edict()
+INFO:pcdet.utils.common_utils:
+cfg.MODEL.DEPTH_LOSS_HEAD.LOSS_TYPE = edict()
+INFO:pcdet.utils.common_utils:cfg.MODEL.DEPTH_LOSS_HEAD.LOSS_TYPE.ce: 1.0
+INFO:pcdet.utils.common_utils:cfg.MODEL.DEPTH_LOSS_HEAD.WEIGHTS: [1.0]
+INFO:pcdet.utils.common_utils:
+cfg.MODEL.POST_PROCESSING = edict()
+INFO:pcdet.utils.common_utils:cfg.MODEL.POST_PROCESSING.RECALL_THRESH_LIST: [0.3, 0.5, 0.7]
+INFO:pcdet.utils.common_utils:cfg.MODEL.POST_PROCESSING.SCORE_THRESH: 0.1
+INFO:pcdet.utils.common_utils:cfg.MODEL.POST_PROCESSING.OUTPUT_RAW_SCORE: False
+INFO:pcdet.utils.common_utils:cfg.MODEL.POST_PROCESSING.EVAL_METRIC: kitti
+INFO:pcdet.utils.common_utils:
+cfg.MODEL.POST_PROCESSING.NMS_CONFIG = edict()
+INFO:pcdet.utils.common_utils:cfg.MODEL.POST_PROCESSING.NMS_CONFIG.MULTI_CLASSES_NMS: True
+INFO:pcdet.utils.common_utils:cfg.MODEL.POST_PROCESSING.NMS_CONFIG.NMS_TYPE: nms_gpu
+INFO:pcdet.utils.common_utils:cfg.MODEL.POST_PROCESSING.NMS_CONFIG.NMS_THRESH: 0.25
+INFO:pcdet.utils.common_utils:cfg.MODEL.POST_PROCESSING.NMS_CONFIG.NMS_PRE_MAXSIZE: 4096
+INFO:pcdet.utils.common_utils:cfg.MODEL.POST_PROCESSING.NMS_CONFIG.NMS_POST_MAXSIZE: 500
+INFO:pcdet.utils.common_utils:
+cfg.OPTIMIZATION = edict()
+INFO:pcdet.utils.common_utils:cfg.OPTIMIZATION.BATCH_SIZE_PER_GPU: 1
+INFO:pcdet.utils.common_utils:cfg.OPTIMIZATION.NUM_EPOCHS: 60
+INFO:pcdet.utils.common_utils:cfg.OPTIMIZATION.OPTIMIZER: adamw
+INFO:pcdet.utils.common_utils:cfg.OPTIMIZATION.LR: 0.001
+INFO:pcdet.utils.common_utils:cfg.OPTIMIZATION.WEIGHT_DECAY: 0.0001
+INFO:pcdet.utils.common_utils:cfg.OPTIMIZATION.MOMENTUM: 0.9
+INFO:pcdet.utils.common_utils:cfg.OPTIMIZATION.DIV_FACTOR: 10
+INFO:pcdet.utils.common_utils:cfg.OPTIMIZATION.DECAY_STEP_LIST: [50]
+INFO:pcdet.utils.common_utils:cfg.OPTIMIZATION.LR_DECAY: 0.1
+INFO:pcdet.utils.common_utils:cfg.OPTIMIZATION.LR_CLIP: 1e-07
+INFO:pcdet.utils.common_utils:cfg.OPTIMIZATION.LR_WARMUP: True
+INFO:pcdet.utils.common_utils:cfg.OPTIMIZATION.WARMUP_EPOCH: 1
+INFO:pcdet.utils.common_utils:cfg.OPTIMIZATION.GRAD_NORM_CLIP: 10
+INFO:pcdet.utils.common_utils:cfg.TAG: dsgn2
+INFO:pcdet.utils.common_utils:cfg.EXP_GROUP_PATH: configs_stereo_kitti_models
+INFO:pcdet.utils.common_utils:Loading KITTI dataset
+INFO:pcdet.utils.common_utils:Total samples for KITTI dataset: 3769
+2023-07-07 13:49:29,012 - mmdet - INFO - load checkpoint from torchvision path: torchvision://resnet34
+2023-07-07 13:49:29,391 - mmdet - WARNING - The model and loaded state dict do not match exactly
+
+size mismatch for layer3.0.conv1.weight: copying a param with shape torch.Size([256, 128, 3, 3]) from checkpoint, the shape in current model is torch.Size([128, 128, 3, 3]).
+size mismatch for layer3.0.bn1.weight: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.0.bn1.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.0.bn1.running_mean: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.0.bn1.running_var: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.0.conv2.weight: copying a param with shape torch.Size([256, 256, 3, 3]) from checkpoint, the shape in current model is torch.Size([128, 128, 3, 3]).
+size mismatch for layer3.0.bn2.weight: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.0.bn2.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.0.bn2.running_mean: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.0.bn2.running_var: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.1.conv1.weight: copying a param with shape torch.Size([256, 256, 3, 3]) from checkpoint, the shape in current model is torch.Size([128, 128, 3, 3]).
+size mismatch for layer3.1.bn1.weight: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.1.bn1.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.1.bn1.running_mean: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.1.bn1.running_var: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.1.conv2.weight: copying a param with shape torch.Size([256, 256, 3, 3]) from checkpoint, the shape in current model is torch.Size([128, 128, 3, 3]).
+size mismatch for layer3.1.bn2.weight: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.1.bn2.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.1.bn2.running_mean: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.1.bn2.running_var: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.2.conv1.weight: copying a param with shape torch.Size([256, 256, 3, 3]) from checkpoint, the shape in current model is torch.Size([128, 128, 3, 3]).
+size mismatch for layer3.2.bn1.weight: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.2.bn1.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.2.bn1.running_mean: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.2.bn1.running_var: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.2.conv2.weight: copying a param with shape torch.Size([256, 256, 3, 3]) from checkpoint, the shape in current model is torch.Size([128, 128, 3, 3]).
+size mismatch for layer3.2.bn2.weight: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.2.bn2.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.2.bn2.running_mean: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.2.bn2.running_var: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.3.conv1.weight: copying a param with shape torch.Size([256, 256, 3, 3]) from checkpoint, the shape in current model is torch.Size([128, 128, 3, 3]).
+size mismatch for layer3.3.bn1.weight: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.3.bn1.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.3.bn1.running_mean: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.3.bn1.running_var: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.3.conv2.weight: copying a param with shape torch.Size([256, 256, 3, 3]) from checkpoint, the shape in current model is torch.Size([128, 128, 3, 3]).
+size mismatch for layer3.3.bn2.weight: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.3.bn2.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.3.bn2.running_mean: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.3.bn2.running_var: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.4.conv1.weight: copying a param with shape torch.Size([256, 256, 3, 3]) from checkpoint, the shape in current model is torch.Size([128, 128, 3, 3]).
+size mismatch for layer3.4.bn1.weight: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.4.bn1.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.4.bn1.running_mean: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.4.bn1.running_var: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.4.conv2.weight: copying a param with shape torch.Size([256, 256, 3, 3]) from checkpoint, the shape in current model is torch.Size([128, 128, 3, 3]).
+size mismatch for layer3.4.bn2.weight: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.4.bn2.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.4.bn2.running_mean: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.4.bn2.running_var: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.5.conv1.weight: copying a param with shape torch.Size([256, 256, 3, 3]) from checkpoint, the shape in current model is torch.Size([128, 128, 3, 3]).
+size mismatch for layer3.5.bn1.weight: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.5.bn1.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.5.bn1.running_mean: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.5.bn1.running_var: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.5.conv2.weight: copying a param with shape torch.Size([256, 256, 3, 3]) from checkpoint, the shape in current model is torch.Size([128, 128, 3, 3]).
+size mismatch for layer3.5.bn2.weight: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.5.bn2.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.5.bn2.running_mean: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer3.5.bn2.running_var: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer4.0.conv1.weight: copying a param with shape torch.Size([512, 256, 3, 3]) from checkpoint, the shape in current model is torch.Size([128, 128, 3, 3]).
+size mismatch for layer4.0.bn1.weight: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer4.0.bn1.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer4.0.bn1.running_mean: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer4.0.bn1.running_var: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer4.0.conv2.weight: copying a param with shape torch.Size([512, 512, 3, 3]) from checkpoint, the shape in current model is torch.Size([128, 128, 3, 3]).
+size mismatch for layer4.0.bn2.weight: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer4.0.bn2.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer4.0.bn2.running_mean: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer4.0.bn2.running_var: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer4.1.conv1.weight: copying a param with shape torch.Size([512, 512, 3, 3]) from checkpoint, the shape in current model is torch.Size([128, 128, 3, 3]).
+size mismatch for layer4.1.bn1.weight: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer4.1.bn1.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer4.1.bn1.running_mean: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer4.1.bn1.running_var: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer4.1.conv2.weight: copying a param with shape torch.Size([512, 512, 3, 3]) from checkpoint, the shape in current model is torch.Size([128, 128, 3, 3]).
+size mismatch for layer4.1.bn2.weight: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer4.1.bn2.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer4.1.bn2.running_mean: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer4.1.bn2.running_var: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer4.2.conv1.weight: copying a param with shape torch.Size([512, 512, 3, 3]) from checkpoint, the shape in current model is torch.Size([128, 128, 3, 3]).
+size mismatch for layer4.2.bn1.weight: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer4.2.bn1.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer4.2.bn1.running_mean: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer4.2.bn1.running_var: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer4.2.conv2.weight: copying a param with shape torch.Size([512, 512, 3, 3]) from checkpoint, the shape in current model is torch.Size([128, 128, 3, 3]).
+size mismatch for layer4.2.bn2.weight: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer4.2.bn2.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer4.2.bn2.running_mean: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([128]).
+size mismatch for layer4.2.bn2.running_var: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([128]).
+unexpected key in source state_dict: fc.weight, fc.bias, layer3.0.downsample.0.weight, layer3.0.downsample.1.running_mean, layer3.0.downsample.1.running_var, layer3.0.downsample.1.weight, layer3.0.downsample.1.bias, layer4.0.downsample.0.weight, layer4.0.downsample.1.running_mean, layer4.0.downsample.1.running_var, layer4.0.downsample.1.weight, layer4.0.downsample.1.bias
+
+stereo volume depth range: 2.0 -> 59.599998474121094, interval 0.19999999470180935
+/home/dsgn2/DSGN2/mmdetection-v2.22.0/mmdet/models/dense_heads/anchor_head.py:116: UserWarning: DeprecationWarning: `num_anchors` is deprecated, for consistency or also use `num_base_priors` instead
+  warnings.warn('DeprecationWarning: `num_anchors` is deprecated, '
+2023-07-07 13:49:32,388 - mmdet - INFO - initialize ATSSAdvHead with init_cfg {'type': 'Normal', 'layer': 'Conv2d', 'std': 0.01, 'override': {'type': 'Normal', 'name': 'atss_cls', 'std': 0.01, 'bias_prob': 0.01}}
+2023-07-07 13:49:32,405 - mmdet - INFO - 
+cls_convs.0.conv.weight - torch.Size([64, 64, 3, 3]): 
+NormalInit: mean=0, std=0.01, bias=0 
+ 
+2023-07-07 13:49:32,405 - mmdet - INFO - 
+cls_convs.0.bn.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of ATSSAdvHead  
+ 
+2023-07-07 13:49:32,405 - mmdet - INFO - 
+cls_convs.0.bn.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of ATSSAdvHead  
+ 
+2023-07-07 13:49:32,406 - mmdet - INFO - 
+cls_convs.1.conv.weight - torch.Size([64, 64, 3, 3]): 
+NormalInit: mean=0, std=0.01, bias=0 
+ 
+2023-07-07 13:49:32,406 - mmdet - INFO - 
+cls_convs.1.bn.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of ATSSAdvHead  
+ 
+2023-07-07 13:49:32,406 - mmdet - INFO - 
+cls_convs.1.bn.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of ATSSAdvHead  
+ 
+2023-07-07 13:49:32,406 - mmdet - INFO - 
+cls_convs.2.conv.weight - torch.Size([64, 64, 3, 3]): 
+NormalInit: mean=0, std=0.01, bias=0 
+ 
+2023-07-07 13:49:32,406 - mmdet - INFO - 
+cls_convs.2.bn.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of ATSSAdvHead  
+ 
+2023-07-07 13:49:32,406 - mmdet - INFO - 
+cls_convs.2.bn.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of ATSSAdvHead  
+ 
+2023-07-07 13:49:32,406 - mmdet - INFO - 
+cls_convs.3.conv.weight - torch.Size([64, 64, 3, 3]): 
+NormalInit: mean=0, std=0.01, bias=0 
+ 
+2023-07-07 13:49:32,407 - mmdet - INFO - 
+cls_convs.3.bn.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of ATSSAdvHead  
+ 
+2023-07-07 13:49:32,407 - mmdet - INFO - 
+cls_convs.3.bn.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of ATSSAdvHead  
+ 
+2023-07-07 13:49:32,407 - mmdet - INFO - 
+reg_convs.0.conv.weight - torch.Size([64, 64, 3, 3]): 
+NormalInit: mean=0, std=0.01, bias=0 
+ 
+2023-07-07 13:49:32,407 - mmdet - INFO - 
+reg_convs.0.bn.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of ATSSAdvHead  
+ 
+2023-07-07 13:49:32,407 - mmdet - INFO - 
+reg_convs.0.bn.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of ATSSAdvHead  
+ 
+2023-07-07 13:49:32,408 - mmdet - INFO - 
+reg_convs.1.conv.weight - torch.Size([64, 64, 3, 3]): 
+NormalInit: mean=0, std=0.01, bias=0 
+ 
+2023-07-07 13:49:32,408 - mmdet - INFO - 
+reg_convs.1.bn.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of ATSSAdvHead  
+ 
+2023-07-07 13:49:32,408 - mmdet - INFO - 
+reg_convs.1.bn.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of ATSSAdvHead  
+ 
+2023-07-07 13:49:32,408 - mmdet - INFO - 
+reg_convs.2.conv.weight - torch.Size([64, 64, 3, 3]): 
+NormalInit: mean=0, std=0.01, bias=0 
+ 
+2023-07-07 13:49:32,408 - mmdet - INFO - 
+reg_convs.2.bn.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of ATSSAdvHead  
+ 
+2023-07-07 13:49:32,408 - mmdet - INFO - 
+reg_convs.2.bn.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of ATSSAdvHead  
+ 
+2023-07-07 13:49:32,408 - mmdet - INFO - 
+reg_convs.3.conv.weight - torch.Size([64, 64, 3, 3]): 
+NormalInit: mean=0, std=0.01, bias=0 
+ 
+2023-07-07 13:49:32,409 - mmdet - INFO - 
+reg_convs.3.bn.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of ATSSAdvHead  
+ 
+2023-07-07 13:49:32,409 - mmdet - INFO - 
+reg_convs.3.bn.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of ATSSAdvHead  
+ 
+2023-07-07 13:49:32,409 - mmdet - INFO - 
+atss_cls.weight - torch.Size([3, 64, 3, 3]): 
+NormalInit: mean=0, std=0.01, bias=-4.59511985013459 
+ 
+2023-07-07 13:49:32,409 - mmdet - INFO - 
+atss_cls.bias - torch.Size([3]): 
+NormalInit: mean=0, std=0.01, bias=-4.59511985013459 
+ 
+2023-07-07 13:49:32,409 - mmdet - INFO - 
+atss_reg.weight - torch.Size([12, 64, 3, 3]): 
+NormalInit: mean=0, std=0.01, bias=0 
+ 
+2023-07-07 13:49:32,409 - mmdet - INFO - 
+atss_reg.bias - torch.Size([12]): 
+NormalInit: mean=0, std=0.01, bias=0 
+ 
+2023-07-07 13:49:32,409 - mmdet - INFO - 
+atss_centerness.weight - torch.Size([1, 64, 3, 3]): 
+NormalInit: mean=0, std=0.01, bias=0 
+ 
+2023-07-07 13:49:32,409 - mmdet - INFO - 
+atss_centerness.bias - torch.Size([1]): 
+NormalInit: mean=0, std=0.01, bias=0 
+ 
+2023-07-07 13:49:32,410 - mmdet - INFO - 
+scales.0.scale - torch.Size([]): 
+The value is the same before and after calling `init_weights` of ATSSAdvHead  
+ 
+2023-07-07 13:49:32,410 - mmdet - INFO - 
+scales.1.scale - torch.Size([]): 
+The value is the same before and after calling `init_weights` of ATSSAdvHead  
+ 
+2023-07-07 13:49:32,410 - mmdet - INFO - 
+scales.2.scale - torch.Size([]): 
+The value is the same before and after calling `init_weights` of ATSSAdvHead  
+ 
+2023-07-07 13:49:32,410 - mmdet - INFO - 
+scales.3.scale - torch.Size([]): 
+The value is the same before and after calling `init_weights` of ATSSAdvHead  
+ 
+2023-07-07 13:49:32,410 - mmdet - INFO - 
+scales.4.scale - torch.Size([]): 
+The value is the same before and after calling `init_weights` of ATSSAdvHead  
+ 
+docker-desktop:9939:9939 [0] NCCL INFO Bootstrap : Using eth0:192.168.65.4<0>
+docker-desktop:9939:9939 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+docker-desktop:9939:9939 [0] NCCL INFO NET/IB : No device found.
+docker-desktop:9939:9939 [0] NCCL INFO NET/Socket : Using [0]eth0:192.168.65.4<0>
+docker-desktop:9939:9939 [0] NCCL INFO Using network Socket
+NCCL version 2.8.4+cuda11.2
+
+docker-desktop:9939:10763 [0] graph/xml.cc:332 NCCL WARN Could not find real path of /sys/class/pci_bus/0000:01/../../0000:01:00.0
+docker-desktop:9939:10763 [0] NCCL INFO graph/xml.cc:469 -> 2
+docker-desktop:9939:10763 [0] NCCL INFO graph/xml.cc:660 -> 2
+docker-desktop:9939:10763 [0] NCCL INFO graph/topo.cc:530 -> 2
+docker-desktop:9939:10763 [0] NCCL INFO init.cc:627 -> 2
+docker-desktop:9939:10763 [0] NCCL INFO init.cc:878 -> 2
+docker-desktop:9939:10763 [0] NCCL INFO group.cc:72 -> 2 [Async thread]
+Traceback (most recent call last):
+  File "tools/test.py", line 210, in <module>
+    main()
+  File "tools/test.py", line 206, in main
+    eval_single_ckpt(model, test_loader, args, eval_output_dir, logger, epoch_id, dist_test=dist_test)
+  File "tools/test.py", line 67, in eval_single_ckpt
+    eval_utils.eval_one_epoch(
+  File "/home/dsgn2/DSGN2/tools/eval_utils/eval_utils.py", line 75, in eval_one_epoch
+    model = torch.nn.parallel.DistributedDataParallel(
+  File "/opt/conda/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 443, in __init__
+    self._sync_params_and_buffers(authoritative_rank=0)
+  File "/opt/conda/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 454, in _sync_params_and_buffers
+    self._distributed_broadcast_coalesced(
+  File "/opt/conda/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 1125, in _distributed_broadcast_coalesced
+    dist._broadcast_coalesced(
+RuntimeError: NCCL error in: ../torch/lib/c10d/ProcessGroupNCCL.cpp:825, unhandled system error, NCCL version 2.8.4
+ncclSystemError: System call (socket, malloc, munmap, etc) failed.
+Traceback (most recent call last):
+  File "tools/test.py", line 210, in <module>
+    main()
+  File "tools/test.py", line 147, in main
+Traceback (most recent call last):
+    total_gpus, cfg.LOCAL_RANK = getattr(common_utils, 'init_dist_%s' % args.launcher)(
+  File "tools/test.py", line 210, in <module>
+  File "/home/dsgn2/DSGN2/pcdet/utils/common_utils.py", line 246, in init_dist_pytorch
+    dist.init_process_group(
+  File "/opt/conda/lib/python3.8/site-packages/torch/distributed/distributed_c10d.py", line 525, in init_process_group
+    _store_based_barrier(rank, store, timeout)
+  File "/opt/conda/lib/python3.8/site-packages/torch/distributed/distributed_c10d.py", line 201, in _store_based_barrier
+        worker_count = store.add(store_key, 0)main()
+
+  File "tools/test.py", line 147, in main
+Traceback (most recent call last):
+  File "tools/test.py", line 210, in <module>
+    total_gpus, cfg.LOCAL_RANK = getattr(common_utils, 'init_dist_%s' % args.launcher)(
+  File "/home/dsgn2/DSGN2/pcdet/utils/common_utils.py", line 246, in init_dist_pytorch
+RuntimeError: Broken pipe
+    dist.init_process_group(
+  File "/opt/conda/lib/python3.8/site-packages/torch/distributed/distributed_c10d.py", line 525, in init_process_group
+    _store_based_barrier(rank, store, timeout)
+  File "/opt/conda/lib/python3.8/site-packages/torch/distributed/distributed_c10d.py", line 201, in _store_based_barrier
+    main()
+  File "tools/test.py", line 147, in main
+    worker_count = store.add(store_key, 0)
+RuntimeError: Broken pipe
+    total_gpus, cfg.LOCAL_RANK = getattr(common_utils, 'init_dist_%s' % args.launcher)(
+  File "/home/dsgn2/DSGN2/pcdet/utils/common_utils.py", line 246, in init_dist_pytorch
+    dist.init_process_group(
+  File "/opt/conda/lib/python3.8/site-packages/torch/distributed/distributed_c10d.py", line 525, in init_process_group
+    _store_based_barrier(rank, store, timeout)
+  File "/opt/conda/lib/python3.8/site-packages/torch/distributed/distributed_c10d.py", line 201, in _store_based_barrier
+    worker_count = store.add(store_key, 0)
+RuntimeError: Broken pipe
+Killing subprocess 9939
+Killing subprocess 9940
+Killing subprocess 9941
+Killing subprocess 9942
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/conda/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/opt/conda/lib/python3.8/site-packages/torch/distributed/launch.py", line 340, in <module>
+    main()
+  File "/opt/conda/lib/python3.8/site-packages/torch/distributed/launch.py", line 326, in main
+    sigkill_handler(signal.SIGTERM, None)  # not coming back
+  File "/opt/conda/lib/python3.8/site-packages/torch/distributed/launch.py", line 301, in sigkill_handler
+    raise subprocess.CalledProcessError(returncode=last_return_code, cmd=cmd)
+subprocess.CalledProcessError: Command '['/opt/conda/bin/python', '-u', 'tools/test.py', '--local_rank=3', '--launcher', 'pytorch', '--workers', '2', '--save_to_file', '--cfg_file', './configs/stereo/kitti_models/dsgn2.yaml', '--exp_name', 'default', '--tcp_port', '8080', '--ckpt', 'data/dsgn2_ep58.pth', '--ckpt_id', '58']' returned non-zero exit status 1.

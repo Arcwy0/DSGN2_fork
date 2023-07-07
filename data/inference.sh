@@ -1,0 +1,1 @@
+NCCL_DEBUG=INFO python -m torch.distributed.launch --nproc_per_node=4 tools/test.py --launcher pytorch --workers 2     --save_to_file --cfg_file ./configs/stereo/kitti_models/dsgn2.yaml --exp_name default --tcp_port 8080 --ckpt data/dsgn2_ep58.pth --ckpt_id 58
