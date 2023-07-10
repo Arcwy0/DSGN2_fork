@@ -9,18 +9,27 @@ ARG GID=1001
 ARG PW=user 
 ARG DEBIAN_FRONTEND=noninteractive
 RUN useradd -m ${USER} --uid=${UID} && echo "${USER}:${PW}" | chpasswd
-
+RUN
 RUN apt-get update && apt-get install -y \
         wget vim usbutils \
-        ffmpeg libsm6 libxext6 \
-        &&  apt install -y protobuf-compiler \
-        && rm -rf /var/lib/apt/lists/*
+        ffmpeg libsm6 libxext6
+# RUN apt update && apt install -y --fix-missing protobuf-compiler \
+#         build-essential devscripts debhelper fakeroot \
+#         && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /home/${USER}
 USER root
 RUN cd /home/${USER} && chown -R ${UID}:${GID} ./
 USER ${UID}:${GID}
 
+#Install new NCCL
+#Build
+# RUN git clone https://github.com/NVIDIA/nccl.git
+# RUN cd nccl && make -j src.build
+# #Install
+# RUN make pkg.debian.build
+# RUN ls build/pkg/txz/
+#Tests are not possible during build
 ENV PATH="${PATH}:/home/${USER}/.local/bin"
 RUN pip3 install -U --no-cache-dir numpy==1.19.5
 # && pip3 install -U --no-cache-dir matplotlib
@@ -89,6 +98,13 @@ RUN cd /home/${USER}/DSGN2/ && pip3 install -r requirements.txt && pip3 install 
 
 # RUN export LLVM_CONFIG='/usr/bin/llvm-config-10'
 # RUN pip3 install -U --no-cache-dir llvmlite
+USER root
+
+# NOTE: Doesn't work, because you need to recompile PyTorch on new version of NCCL then
+# RUN wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-keyring_1.0-1_all.deb
+# RUN dpkg -i cuda-keyring_1.0-1_all.deb
+# RUN apt update && apt install -y libnccl2=2.8.4-1+cuda11.2 libnccl-dev=2.8.4-1+cuda11.2
 
 
+USER ${UID}:${GID}
 RUN cd /home/${USER}/
