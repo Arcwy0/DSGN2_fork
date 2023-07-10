@@ -17,7 +17,7 @@ services:
         restart: always
         volumes:
             - type: bind
-              source: ${PRODUCTION_PATH}/../data
+              source: /home/arcwy/Unity
               target: /home/dsgn2/DSGN2/data
             - /dev:/dev:rw
             - /dev:/dev \

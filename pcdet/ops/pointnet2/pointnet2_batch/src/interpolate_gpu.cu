@@ -14,8 +14,8 @@ All Rights Reserved 2018.
 #include <ATen/ceil_div.h>
 #include <ATen/cuda/Atomic.cuh>
 #include <ATen/cuda/DeviceUtils.cuh>
-
-#define THREADS_PER_BLOCK 128
+#include "cuda_utils.h"
+#include "interpolate_gpu.h"
 
 
 __global__ void three_nn_kernel_fast(int b, int n, int m, const float *__restrict__ unknown, 
