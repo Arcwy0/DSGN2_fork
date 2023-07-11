@@ -7,7 +7,7 @@ export ARCH=`uname -m`
 export NUM_THREADS=`nproc`
 
 xhost +
-docker-compose --env-file $PRODUCTION_PATH/test.env \
+docker compose --env-file $PRODUCTION_PATH/test.env \
     -f $PRODUCTION_PATH/test.yml \
     up $@
 xhost -

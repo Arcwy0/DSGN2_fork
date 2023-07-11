@@ -1,0 +1,7 @@
+version: "3.8"
+services:
+    jetson-app:
+        image: ${ARCH}dsgn2:${TAG}
+        container_name: dsgn2
+        env_file: $ENV_FILE
+        command: "sleep infinity"

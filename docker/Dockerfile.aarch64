@@ -31,7 +31,7 @@ RUN mim install mmcv-full
 # Install DSGN++
 RUN export OPENBLAS_CORETYPE=ARMV8
 # https://github.com/chenyilun95/DSGN2 https://github.com/Arcwy0/DSGN2_fork
-ARG YA=1
+ARG YA=2
 RUN git clone https://github.com/Arcwy0/DSGN2_fork --branch main
 RUN cd DSGN2_fork/mmdetection-v2.22.0/ && pip3 install -e .
 
@@ -63,8 +63,8 @@ RUN cd ./spconv121_torch200/dist && ls && pip3 install spconv-1.2.1-cp38-cp38-li
 USER ${UID}:${GID}
 RUN cd /home/${USER}
 SHELL ["/bin/bash", "-l", "-c"]
-ARG TORCH_CUDA_ARCH_LIST=7.2+PTX
-RUN export TORCH_CUDA_ARCH_LIST=7.2+PTX
+ARG TORCH_CUDA_ARCH_LIST='7.2+PTX'
+RUN export TORCH_CUDA_ARCH_LIST='7.2+PTX'
 ENV THCudaCheck = C10_CUDA_CHECK
 ENV FORCE_CUDA="1"
 RUN export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
@@ -72,10 +72,9 @@ RUN export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY
 RUN echo "export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}" >> ~/.bashrc &&\
     echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}" >> ~/.bashrc
 RUN export CUDA_NVCC_EXECUTABLE=$(which nvcc)
-RUN sh -c "nvcc --version;" && python3 -c "import torch;print('TORCHVERSION:'+torch.__version__);print(torch.cuda.is_available());" \
- && pip3 install -U Cython
+RUN pip3 install -U Cython
 RUN pip3 install -U --no-cache-dir numba
-RUN cd /home/${USER}/DSGN2_fork/ && pip3 install -r requirements.txt && pip3 install -e .
+RUN cd /home/${USER}/DSGN2/ && pip3 install -r requirements.txt && CFLAGS="-fopenmp" pip3 install -e .
 # RUN cd /home/${USER}/DSGN2_fork/ && pip3 install -r requirements.txt && pip3 install -e .
 # RUN cd /home/${USER}/DSGN2_fork/ && pip3 install -e .
 

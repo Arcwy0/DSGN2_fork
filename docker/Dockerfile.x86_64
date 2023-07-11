@@ -74,9 +74,9 @@ RUN cd ./spconv121_torch200/dist && ls && pip3 install spconv-1.2.1-cp38-cp38-li
 #     rm -rf /root/spconv
 RUN cd /home/${USER}
 SHELL ["/bin/bash", "-l", "-c"]
-ARG TORCH_CUDA_ARCH_LIST=7.2+PTX
-RUN export TORCH_CUDA_ARCH_LIST=7.2+PTX
-ENV THCudaCheck = C10_CUDA_CHECK
+ARG TORCH_CUDA_ARCH_LIST='6.1;7.2+PTX'
+RUN export USE_OPENCV=1
+RUN export TORCH_CUDA_ARCH_LIST='6.1;7.2+PTX'
 ENV FORCE_CUDA="1"
 RUN export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
 RUN export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
