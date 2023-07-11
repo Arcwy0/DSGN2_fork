@@ -9,5 +9,5 @@ export NUM_THREADS=`nproc`
 xhost +
 docker compose --env-file $PRODUCTION_PATH/test.env \
     -f $PRODUCTION_PATH/test.yml \
-    up $@
+    up -d $@
 xhost -
