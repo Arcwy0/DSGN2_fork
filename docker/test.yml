@@ -18,7 +18,7 @@ services:
         volumes:
             - type: bind
               source: ${PRODUCTION_PATH}/../data
-              target: /home/dsgn2/DSGN2/data
+              target: /home/dsgn2/DSGN2_fork/data
             - /dev:/dev:rw
             - /dev:/dev \
         command: /bin/sh
