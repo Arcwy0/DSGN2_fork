@@ -8,12 +8,7 @@ All Rights Reserved 2018.
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <ATen/ATen.h>
-#include <ATen/cuda/CUDAContext.h>
-#include <c10/cuda/CUDAGuard.h>
-#include <ATen/ceil_div.h>
-#include <ATen/cuda/Atomic.cuh>
-#include <ATen/cuda/DeviceUtils.cuh>
+
 #include "cuda_utils.h"
 #include "interpolate_gpu.h"
 

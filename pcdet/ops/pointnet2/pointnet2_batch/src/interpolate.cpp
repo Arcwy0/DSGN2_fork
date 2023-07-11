@@ -20,6 +20,7 @@ All Rights Reserved 2018.
 #include <ATen/ceil_div.h>
 //extern THCState *state;
 
+#define THREADS_PER_BLOCK 256
 
 void three_nn_wrapper_fast(int b, int n, int m, at::Tensor unknown_tensor, 
     at::Tensor known_tensor, at::Tensor dist2_tensor, at::Tensor idx_tensor) {

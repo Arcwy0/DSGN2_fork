@@ -1,0 +1,1466 @@
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:25:15: warning: ??at::DeprecatedTypeProperties& at::Tensor::type() const?? is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+#0 1160.6        25 |   if (!x.type().is_cuda()) { \
+#0 1160.6           |               ^
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:36:24: note: in expansion of macro ??CHECK_CUDA??
+#0 1160.6        36 | #define CHECK_INPUT(x) CHECK_CUDA(x);CHECK_CONTIGUOUS(x)
+#0 1160.6           |                        ^~~~~~~~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:96:5: note: in expansion of macro ??CHECK_INPUT??
+#0 1160.6        96 |     CHECK_INPUT(new_xyz_tensor);
+#0 1160.6           |     ^~~~~~~~~~~
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:216:30: note: declared here
+#0 1160.6       216 |   DeprecatedTypeProperties & type() const {
+#0 1160.6           |                              ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:25:15: warning: ??at::DeprecatedTypeProperties& at::Tensor::type() const?? is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+#0 1160.6        25 |   if (!x.type().is_cuda()) { \
+#0 1160.6           |               ^
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:36:24: note: in expansion of macro ??CHECK_CUDA??
+#0 1160.6        36 | #define CHECK_INPUT(x) CHECK_CUDA(x);CHECK_CONTIGUOUS(x)
+#0 1160.6           |                        ^~~~~~~~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:97:5: note: in expansion of macro ??CHECK_INPUT??
+#0 1160.6        97 |     CHECK_INPUT(new_xyz_grid_centers_tensor);
+#0 1160.6           |     ^~~~~~~~~~~
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:216:30: note: declared here
+#0 1160.6       216 |   DeprecatedTypeProperties & type() const {
+#0 1160.6           |                              ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:25:15: warning: ??at::DeprecatedTypeProperties& at::Tensor::type() const?? is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+#0 1160.6        25 |   if (!x.type().is_cuda()) { \
+#0 1160.6           |               ^
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:36:24: note: in expansion of macro ??CHECK_CUDA??
+#0 1160.6        36 | #define CHECK_INPUT(x) CHECK_CUDA(x);CHECK_CONTIGUOUS(x)
+#0 1160.6           |                        ^~~~~~~~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:98:5: note: in expansion of macro ??CHECK_INPUT??
+#0 1160.6        98 |     CHECK_INPUT(new_xyz_grid_idxs_tensor);
+#0 1160.6           |     ^~~~~~~~~~~
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:216:30: note: declared here
+#0 1160.6       216 |   DeprecatedTypeProperties & type() const {
+#0 1160.6           |                              ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:25:15: warning: ??at::DeprecatedTypeProperties& at::Tensor::type() const?? is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+#0 1160.6        25 |   if (!x.type().is_cuda()) { \
+#0 1160.6           |               ^
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:36:24: note: in expansion of macro ??CHECK_CUDA??
+#0 1160.6        36 | #define CHECK_INPUT(x) CHECK_CUDA(x);CHECK_CONTIGUOUS(x)
+#0 1160.6           |                        ^~~~~~~~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:99:5: note: in expansion of macro ??CHECK_INPUT??
+#0 1160.6        99 |     CHECK_INPUT(new_xyz_grid_dist2_tensor);
+#0 1160.6           |     ^~~~~~~~~~~
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:216:30: note: declared here
+#0 1160.6       216 |   DeprecatedTypeProperties & type() const {
+#0 1160.6           |                              ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:25:15: warning: ??at::DeprecatedTypeProperties& at::Tensor::type() const?? is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+#0 1160.6        25 |   if (!x.type().is_cuda()) { \
+#0 1160.6           |               ^
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:36:24: note: in expansion of macro ??CHECK_CUDA??
+#0 1160.6        36 | #define CHECK_INPUT(x) CHECK_CUDA(x);CHECK_CONTIGUOUS(x)
+#0 1160.6           |                        ^~~~~~~~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:100:5: note: in expansion of macro ??CHECK_INPUT??
+#0 1160.6       100 |     CHECK_INPUT(stack_neighbor_idxs_tensor);
+#0 1160.6           |     ^~~~~~~~~~~
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:216:30: note: declared here
+#0 1160.6       216 |   DeprecatedTypeProperties & type() const {
+#0 1160.6           |                              ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:25:15: warning: ??at::DeprecatedTypeProperties& at::Tensor::type() const?? is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+#0 1160.6        25 |   if (!x.type().is_cuda()) { \
+#0 1160.6           |               ^
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:36:24: note: in expansion of macro ??CHECK_CUDA??
+#0 1160.6        36 | #define CHECK_INPUT(x) CHECK_CUDA(x);CHECK_CONTIGUOUS(x)
+#0 1160.6           |                        ^~~~~~~~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:101:5: note: in expansion of macro ??CHECK_INPUT??
+#0 1160.6       101 |     CHECK_INPUT(start_len_tensor);
+#0 1160.6           |     ^~~~~~~~~~~
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:216:30: note: declared here
+#0 1160.6       216 |   DeprecatedTypeProperties & type() const {
+#0 1160.6           |                              ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:103:63: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6       103 |     const float *support_xyz = support_xyz_tensor.data<float>();
+#0 1160.6           |                                                               ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:104:55: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6       104 |     const float *new_xyz = new_xyz_tensor.data<float>();
+#0 1160.6           |                                                       ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:105:81: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6       105 |     const float *new_xyz_grid_centers = new_xyz_grid_centers_tensor.data<float>();
+#0 1160.6           |                                                                                 ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:106:65: warning: ??T* at::Tensor::data() const [with T = int]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6       106 |     int *new_xyz_grid_idxs = new_xyz_grid_idxs_tensor.data<int>();
+#0 1160.6           |                                                                 ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:107:71: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6       107 |     float *new_xyz_grid_dist2 = new_xyz_grid_dist2_tensor.data<float>();
+#0 1160.6           |                                                                       ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:108:69: warning: ??T* at::Tensor::data() const [with T = int]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6       108 |     int *stack_neighbor_idxs = stack_neighbor_idxs_tensor.data<int>();
+#0 1160.6           |                                                                     ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:109:49: warning: ??T* at::Tensor::data() const [with T = int]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6       109 |     int *start_len = start_len_tensor.data<int>();
+#0 1160.6           |                                                 ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp: In function ??int vector_pool_wrapper_stack(at::Tensor, at::Tensor, at::Tensor, at::Tensor, at::Tensor, at::Tensor, at::Tensor, at::Tensor, at::Tensor, int, int, int, float, int, int, int, int, int)??:
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:25:15: warning: ??at::DeprecatedTypeProperties& at::Tensor::type() const?? is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+#0 1160.6        25 |   if (!x.type().is_cuda()) { \
+#0 1160.6           |               ^
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:36:24: note: in expansion of macro ??CHECK_CUDA??
+#0 1160.6        36 | #define CHECK_INPUT(x) CHECK_CUDA(x);CHECK_CONTIGUOUS(x)
+#0 1160.6           |                        ^~~~~~~~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:139:5: note: in expansion of macro ??CHECK_INPUT??
+#0 1160.6       139 |     CHECK_INPUT(support_xyz_tensor);
+#0 1160.6           |     ^~~~~~~~~~~
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:216:30: note: declared here
+#0 1160.6       216 |   DeprecatedTypeProperties & type() const {
+#0 1160.6           |                              ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:25:15: warning: ??at::DeprecatedTypeProperties& at::Tensor::type() const?? is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+#0 1160.6        25 |   if (!x.type().is_cuda()) { \
+#0 1160.6           |               ^
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:36:24: note: in expansion of macro ??CHECK_CUDA??
+#0 1160.6        36 | #define CHECK_INPUT(x) CHECK_CUDA(x);CHECK_CONTIGUOUS(x)
+#0 1160.6           |                        ^~~~~~~~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:140:5: note: in expansion of macro ??CHECK_INPUT??
+#0 1160.6       140 |     CHECK_INPUT(support_features_tensor);
+#0 1160.6           |     ^~~~~~~~~~~
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:216:30: note: declared here
+#0 1160.6       216 |   DeprecatedTypeProperties & type() const {
+#0 1160.6           |                              ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:25:15: warning: ??at::DeprecatedTypeProperties& at::Tensor::type() const?? is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+#0 1160.6        25 |   if (!x.type().is_cuda()) { \
+#0 1160.6           |               ^
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:36:24: note: in expansion of macro ??CHECK_CUDA??
+#0 1160.6        36 | #define CHECK_INPUT(x) CHECK_CUDA(x);CHECK_CONTIGUOUS(x)
+#0 1160.6           |                        ^~~~~~~~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:141:5: note: in expansion of macro ??CHECK_INPUT??
+#0 1160.6       141 |     CHECK_INPUT(xyz_batch_cnt_tensor);
+#0 1160.6           |     ^~~~~~~~~~~
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:216:30: note: declared here
+#0 1160.6       216 |   DeprecatedTypeProperties & type() const {
+#0 1160.6           |                              ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:25:15: warning: ??at::DeprecatedTypeProperties& at::Tensor::type() const?? is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+#0 1160.6        25 |   if (!x.type().is_cuda()) { \
+#0 1160.6           |               ^
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:36:24: note: in expansion of macro ??CHECK_CUDA??
+#0 1160.6        36 | #define CHECK_INPUT(x) CHECK_CUDA(x);CHECK_CONTIGUOUS(x)
+#0 1160.6           |                        ^~~~~~~~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:142:5: note: in expansion of macro ??CHECK_INPUT??
+#0 1160.6       142 |     CHECK_INPUT(new_xyz_tensor);
+#0 1160.6           |     ^~~~~~~~~~~
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:216:30: note: declared here
+#0 1160.6       216 |   DeprecatedTypeProperties & type() const {
+#0 1160.6           |                              ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:25:15: warning: ??at::DeprecatedTypeProperties& at::Tensor::type() const?? is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+#0 1160.6        25 |   if (!x.type().is_cuda()) { \
+#0 1160.6           |               ^
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:36:24: note: in expansion of macro ??CHECK_CUDA??
+#0 1160.6        36 | #define CHECK_INPUT(x) CHECK_CUDA(x);CHECK_CONTIGUOUS(x)
+#0 1160.6           |                        ^~~~~~~~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:143:5: note: in expansion of macro ??CHECK_INPUT??
+#0 1160.6       143 |     CHECK_INPUT(new_xyz_batch_cnt_tensor);
+#0 1160.6           |     ^~~~~~~~~~~
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:216:30: note: declared here
+#0 1160.6       216 |   DeprecatedTypeProperties & type() const {
+#0 1160.6           |                              ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:25:15: warning: ??at::DeprecatedTypeProperties& at::Tensor::type() const?? is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+#0 1160.6        25 |   if (!x.type().is_cuda()) { \
+#0 1160.6           |               ^
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:36:24: note: in expansion of macro ??CHECK_CUDA??
+#0 1160.6        36 | #define CHECK_INPUT(x) CHECK_CUDA(x);CHECK_CONTIGUOUS(x)
+#0 1160.6           |                        ^~~~~~~~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:144:5: note: in expansion of macro ??CHECK_INPUT??
+#0 1160.6       144 |     CHECK_INPUT(new_features_tensor);
+#0 1160.6           |     ^~~~~~~~~~~
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:216:30: note: declared here
+#0 1160.6       216 |   DeprecatedTypeProperties & type() const {
+#0 1160.6           |                              ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:25:15: warning: ??at::DeprecatedTypeProperties& at::Tensor::type() const?? is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+#0 1160.6        25 |   if (!x.type().is_cuda()) { \
+#0 1160.6           |               ^
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:36:24: note: in expansion of macro ??CHECK_CUDA??
+#0 1160.6        36 | #define CHECK_INPUT(x) CHECK_CUDA(x);CHECK_CONTIGUOUS(x)
+#0 1160.6           |                        ^~~~~~~~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:145:5: note: in expansion of macro ??CHECK_INPUT??
+#0 1160.6       145 |     CHECK_INPUT(new_local_xyz_tensor);
+#0 1160.6           |     ^~~~~~~~~~~
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:216:30: note: declared here
+#0 1160.6       216 |   DeprecatedTypeProperties & type() const {
+#0 1160.6           |                              ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:25:15: warning: ??at::DeprecatedTypeProperties& at::Tensor::type() const?? is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+#0 1160.6        25 |   if (!x.type().is_cuda()) { \
+#0 1160.6           |               ^
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:36:24: note: in expansion of macro ??CHECK_CUDA??
+#0 1160.6        36 | #define CHECK_INPUT(x) CHECK_CUDA(x);CHECK_CONTIGUOUS(x)
+#0 1160.6           |                        ^~~~~~~~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:146:5: note: in expansion of macro ??CHECK_INPUT??
+#0 1160.6       146 |     CHECK_INPUT(point_cnt_of_grid_tensor);
+#0 1160.6           |     ^~~~~~~~~~~
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:216:30: note: declared here
+#0 1160.6       216 |   DeprecatedTypeProperties & type() const {
+#0 1160.6           |                              ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:25:15: warning: ??at::DeprecatedTypeProperties& at::Tensor::type() const?? is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+#0 1160.6        25 |   if (!x.type().is_cuda()) { \
+#0 1160.6           |               ^
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:36:24: note: in expansion of macro ??CHECK_CUDA??
+#0 1160.6        36 | #define CHECK_INPUT(x) CHECK_CUDA(x);CHECK_CONTIGUOUS(x)
+#0 1160.6           |                        ^~~~~~~~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:147:5: note: in expansion of macro ??CHECK_INPUT??
+#0 1160.6       147 |     CHECK_INPUT(grouped_idxs_tensor);
+#0 1160.6           |     ^~~~~~~~~~~
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:216:30: note: declared here
+#0 1160.6       216 |   DeprecatedTypeProperties & type() const {
+#0 1160.6           |                              ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:149:63: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6       149 |     const float *support_xyz = support_xyz_tensor.data<float>();
+#0 1160.6           |                                                               ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:150:73: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6       150 |     const float *support_features = support_features_tensor.data<float>();
+#0 1160.6           |                                                                         ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:151:63: warning: ??T* at::Tensor::data() const [with T = int]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6       151 |     const int *xyz_batch_cnt = xyz_batch_cnt_tensor.data<int>();
+#0 1160.6           |                                                               ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:152:55: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6       152 |     const float *new_xyz = new_xyz_tensor.data<float>();
+#0 1160.6           |                                                       ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:153:71: warning: ??T* at::Tensor::data() const [with T = int]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6       153 |     const int *new_xyz_batch_cnt = new_xyz_batch_cnt_tensor.data<int>();
+#0 1160.6           |                                                                       ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:154:59: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6       154 |     float *new_features = new_features_tensor.data<float>();
+#0 1160.6           |                                                           ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:155:61: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6       155 |     float *new_local_xyz = new_local_xyz_tensor.data<float>();
+#0 1160.6           |                                                             ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:156:65: warning: ??T* at::Tensor::data() const [with T = int]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6       156 |     int *point_cnt_of_grid = point_cnt_of_grid_tensor.data<int>();
+#0 1160.6           |                                                                 ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:157:55: warning: ??T* at::Tensor::data() const [with T = int]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6       157 |     int *grouped_idxs = grouped_idxs_tensor.data<int>();
+#0 1160.6           |                                                       ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp: In function ??int vector_pool_grad_wrapper_stack(at::Tensor, at::Tensor, at::Tensor, at::Tensor)??:
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:25:15: warning: ??at::DeprecatedTypeProperties& at::Tensor::type() const?? is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+#0 1160.6        25 |   if (!x.type().is_cuda()) { \
+#0 1160.6           |               ^
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:36:24: note: in expansion of macro ??CHECK_CUDA??
+#0 1160.6        36 | #define CHECK_INPUT(x) CHECK_CUDA(x);CHECK_CONTIGUOUS(x)
+#0 1160.6           |                        ^~~~~~~~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:185:5: note: in expansion of macro ??CHECK_INPUT??
+#0 1160.6       185 |     CHECK_INPUT(grad_new_features_tensor);
+#0 1160.6           |     ^~~~~~~~~~~
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:216:30: note: declared here
+#0 1160.6       216 |   DeprecatedTypeProperties & type() const {
+#0 1160.6           |                              ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:25:15: warning: ??at::DeprecatedTypeProperties& at::Tensor::type() const?? is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+#0 1160.6        25 |   if (!x.type().is_cuda()) { \
+#0 1160.6           |               ^
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:36:24: note: in expansion of macro ??CHECK_CUDA??
+#0 1160.6        36 | #define CHECK_INPUT(x) CHECK_CUDA(x);CHECK_CONTIGUOUS(x)
+#0 1160.6           |                        ^~~~~~~~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:186:5: note: in expansion of macro ??CHECK_INPUT??
+#0 1160.6       186 |     CHECK_INPUT(point_cnt_of_grid_tensor);
+#0 1160.6           |     ^~~~~~~~~~~
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:216:30: note: declared here
+#0 1160.6       216 |   DeprecatedTypeProperties & type() const {
+#0 1160.6           |                              ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:25:15: warning: ??at::DeprecatedTypeProperties& at::Tensor::type() const?? is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+#0 1160.6        25 |   if (!x.type().is_cuda()) { \
+#0 1160.6           |               ^
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:36:24: note: in expansion of macro ??CHECK_CUDA??
+#0 1160.6        36 | #define CHECK_INPUT(x) CHECK_CUDA(x);CHECK_CONTIGUOUS(x)
+#0 1160.6           |                        ^~~~~~~~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:187:5: note: in expansion of macro ??CHECK_INPUT??
+#0 1160.6       187 |     CHECK_INPUT(grouped_idxs_tensor);
+#0 1160.6           |     ^~~~~~~~~~~
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:216:30: note: declared here
+#0 1160.6       216 |   DeprecatedTypeProperties & type() const {
+#0 1160.6           |                              ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:25:15: warning: ??at::DeprecatedTypeProperties& at::Tensor::type() const?? is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+#0 1160.6        25 |   if (!x.type().is_cuda()) { \
+#0 1160.6           |               ^
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:36:24: note: in expansion of macro ??CHECK_CUDA??
+#0 1160.6        36 | #define CHECK_INPUT(x) CHECK_CUDA(x);CHECK_CONTIGUOUS(x)
+#0 1160.6           |                        ^~~~~~~~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:188:5: note: in expansion of macro ??CHECK_INPUT??
+#0 1160.6       188 |     CHECK_INPUT(grad_support_features_tensor);
+#0 1160.6           |     ^~~~~~~~~~~
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:216:30: note: declared here
+#0 1160.6       216 |   DeprecatedTypeProperties & type() const {
+#0 1160.6           |                              ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:197:75: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6       197 |     const float *grad_new_features = grad_new_features_tensor.data<float>();
+#0 1160.6           |                                                                           ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:198:71: warning: ??T* at::Tensor::data() const [with T = int]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6       198 |     const int *point_cnt_of_grid = point_cnt_of_grid_tensor.data<int>();
+#0 1160.6           |                                                                       ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:199:61: warning: ??T* at::Tensor::data() const [with T = int]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6       199 |     const int *grouped_idxs = grouped_idxs_tensor.data<int>();
+#0 1160.6           |                                                             ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:200:77: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6       200 |     float *grad_support_features = grad_support_features_tensor.data<float>();
+#0 1160.6           |                                                                             ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.cpp:11:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     [11/13] /usr/local/cuda/bin/nvcc  -I/usr/local/lib/python3.8/dist-packages/torch/include -I/usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include -I/usr/local/lib/python3.8/dist-packages/torch/include/TH -I/usr/local/lib/python3.8/dist-packages/torch/include/THC -I/usr/local/cuda/include -I/usr/include/python3.8 -c -c /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/interpolate_gpu.cu -o /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_stack/src/interpolate_gpu.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1013"' -DTORCH_EXTENSION_NAME=pointnet2_stack_cuda -D_GLIBCXX_USE_CXX11_ABI=1 -gencode=arch=compute_72,code=compute_72 -gencode=arch=compute_72,code=sm_72 -std=c++14
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/c10/util/irange.h(54): warning: pointless comparison of unsigned integer with zero
+#0 1160.6               detected during:
+#0 1160.6                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator==(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=size_t, one_sided=false, <unnamed>=0]"
+#0 1160.6     (61): here
+#0 1160.6                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator!=(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=size_t, one_sided=false, <unnamed>=0]"
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/c10/core/TensorImpl.h(77): here
+#0 1160.6     
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/c10/util/irange.h(54): warning: pointless comparison of unsigned integer with zero
+#0 1160.6               detected during:
+#0 1160.6                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator==(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=std::size_t, one_sided=true, <unnamed>=0]"
+#0 1160.6     (61): here
+#0 1160.6                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator!=(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=std::size_t, one_sided=true, <unnamed>=0]"
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/qualified_name.h(73): here
+#0 1160.6     
+#0 1160.6     [12/13] /usr/local/cuda/bin/nvcc  -I/usr/local/lib/python3.8/dist-packages/torch/include -I/usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include -I/usr/local/lib/python3.8/dist-packages/torch/include/TH -I/usr/local/lib/python3.8/dist-packages/torch/include/THC -I/usr/local/cuda/include -I/usr/include/python3.8 -c -c /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query_gpu.cu -o /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query_gpu.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1013"' -DTORCH_EXTENSION_NAME=pointnet2_stack_cuda -D_GLIBCXX_USE_CXX11_ABI=1 -gencode=arch=compute_72,code=compute_72 -gencode=arch=compute_72,code=sm_72 -std=c++14
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/c10/util/irange.h(54): warning: pointless comparison of unsigned integer with zero
+#0 1160.6               detected during:
+#0 1160.6                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator==(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=size_t, one_sided=false, <unnamed>=0]"
+#0 1160.6     (61): here
+#0 1160.6                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator!=(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=size_t, one_sided=false, <unnamed>=0]"
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/c10/core/TensorImpl.h(77): here
+#0 1160.6     
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/c10/util/irange.h(54): warning: pointless comparison of unsigned integer with zero
+#0 1160.6               detected during:
+#0 1160.6                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator==(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=std::size_t, one_sided=true, <unnamed>=0]"
+#0 1160.6     (61): here
+#0 1160.6                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator!=(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=std::size_t, one_sided=true, <unnamed>=0]"
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/qualified_name.h(73): here
+#0 1160.6     
+#0 1160.6     [13/13] /usr/local/cuda/bin/nvcc  -I/usr/local/lib/python3.8/dist-packages/torch/include -I/usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include -I/usr/local/lib/python3.8/dist-packages/torch/include/TH -I/usr/local/lib/python3.8/dist-packages/torch/include/THC -I/usr/local/cuda/include -I/usr/include/python3.8 -c -c /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool_gpu.cu -o /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool_gpu.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1013"' -DTORCH_EXTENSION_NAME=pointnet2_stack_cuda -D_GLIBCXX_USE_CXX11_ABI=1 -gencode=arch=compute_72,code=compute_72 -gencode=arch=compute_72,code=sm_72 -std=c++14
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/c10/util/irange.h(54): warning: pointless comparison of unsigned integer with zero
+#0 1160.6               detected during:
+#0 1160.6                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator==(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=size_t, one_sided=false, <unnamed>=0]"
+#0 1160.6     (61): here
+#0 1160.6                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator!=(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=size_t, one_sided=false, <unnamed>=0]"
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/c10/core/TensorImpl.h(77): here
+#0 1160.6     
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/c10/util/irange.h(54): warning: pointless comparison of unsigned integer with zero
+#0 1160.6               detected during:
+#0 1160.6                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator==(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=std::size_t, one_sided=true, <unnamed>=0]"
+#0 1160.6     (61): here
+#0 1160.6                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator!=(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=std::size_t, one_sided=true, <unnamed>=0]"
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/qualified_name.h(73): here
+#0 1160.6     
+#0 1160.6     creating build/lib.linux-aarch64-3.8/pcdet/ops/pointnet2
+#0 1160.6     creating build/lib.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_stack
+#0 1160.6     aarch64-linux-gnu-g++ -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -g -fwrapv -O2 -Wl,-Bsymbolic-functions -Wl,-z,relro -g -fwrapv -O2 -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_stack/src/pointnet2_api.o /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_stack/src/ball_query.o /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_stack/src/ball_query_gpu.o /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_stack/src/group_points.o /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_stack/src/group_points_gpu.o /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_stack/src/sampling.o /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_stack/src/sampling_gpu.o /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_stack/src/interpolate.o /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_stack/src/interpolate_gpu.o /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query.o /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_stack/src/voxel_query_gpu.o /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool.o /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_stack/src/vector_pool_gpu.o -L/usr/local/lib/python3.8/dist-packages/torch/lib -L/usr/local/cuda/lib64 -lc10 -ltorch -ltorch_cpu -ltorch_python -lcudart -lc10_cuda -ltorch_cuda -o build/lib.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_stack/pointnet2_stack_cuda.cpython-38-aarch64-linux-gnu.so
+#0 1160.6     building 'pcdet.ops.pointnet2.pointnet2_batch.pointnet2_batch_cuda' extension
+#0 1160.6     creating /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_batch
+#0 1160.6     creating /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_batch/src
+#0 1160.6     Emitting ninja build file /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/build.ninja...
+#0 1160.6     Compiling objects...
+#0 1160.6     Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+#0 1160.6     [1/9] c++ -MMD -MF /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.o.d -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -I/usr/local/lib/python3.8/dist-packages/torch/include -I/usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include -I/usr/local/lib/python3.8/dist-packages/torch/include/TH -I/usr/local/lib/python3.8/dist-packages/torch/include/THC -I/usr/local/cuda/include -I/usr/include/python3.8 -c -c /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp -o /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.o -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1013"' -DTORCH_EXTENSION_NAME=pointnet2_batch_cuda -D_GLIBCXX_USE_CXX11_ABI=1 -std=c++14
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp: In function ??void three_nn_wrapper_fast(int, int, int, at::Tensor, at::Tensor, at::Tensor, at::Tensor)??:
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp:27:55: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        27 |     const float *unknown = unknown_tensor.data<float>();
+#0 1160.6           |                                                       ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp:28:51: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        28 |     const float *known = known_tensor.data<float>();
+#0 1160.6           |                                                   ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp:29:45: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        29 |     float *dist2 = dist2_tensor.data<float>();
+#0 1160.6           |                                             ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp:30:37: warning: ??T* at::Tensor::data() const [with T = int]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        30 |     int *idx = idx_tensor.data<int>();
+#0 1160.6           |                                     ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp: In function ??void three_interpolate_wrapper_fast(int, int, int, int, at::Tensor, at::Tensor, at::Tensor, at::Tensor)??:
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp:42:53: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        42 |     const float *points = points_tensor.data<float>();
+#0 1160.6           |                                                     ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp:43:53: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        43 |     const float *weight = weight_tensor.data<float>();
+#0 1160.6           |                                                     ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp:44:41: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        44 |     float *out = out_tensor.data<float>();
+#0 1160.6           |                                         ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp:45:43: warning: ??T* at::Tensor::data() const [with T = int]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        45 |     const int *idx = idx_tensor.data<int>();
+#0 1160.6           |                                           ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp: In function ??void three_interpolate_grad_wrapper_fast(int, int, int, int, at::Tensor, at::Tensor, at::Tensor, at::Tensor)??:
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp:56:57: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        56 |     const float *grad_out = grad_out_tensor.data<float>();
+#0 1160.6           |                                                         ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp:57:53: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        57 |     const float *weight = weight_tensor.data<float>();
+#0 1160.6           |                                                     ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp:58:57: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        58 |     float *grad_points = grad_points_tensor.data<float>();
+#0 1160.6           |                                                         ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp:59:43: warning: ??T* at::Tensor::data() const [with T = int]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        59 |     const int *idx = idx_tensor.data<int>();
+#0 1160.6           |                                           ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     [2/9] c++ -MMD -MF /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_batch/src/group_points.o.d -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -I/usr/local/lib/python3.8/dist-packages/torch/include -I/usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include -I/usr/local/lib/python3.8/dist-packages/torch/include/TH -I/usr/local/lib/python3.8/dist-packages/torch/include/THC -I/usr/local/cuda/include -I/usr/include/python3.8 -c -c /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/group_points.cpp -o /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_batch/src/group_points.o -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1013"' -DTORCH_EXTENSION_NAME=pointnet2_batch_cuda -D_GLIBCXX_USE_CXX11_ABI=1 -std=c++14
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/group_points.cpp: In function ??int group_points_grad_wrapper_fast(int, int, int, int, int, at::Tensor, at::Tensor, at::Tensor)??:
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/group_points.cpp:25:57: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        25 |     float *grad_points = grad_points_tensor.data<float>();
+#0 1160.6           |                                                         ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/group_points.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/group_points.cpp:26:43: warning: ??T* at::Tensor::data() const [with T = int]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        26 |     const int *idx = idx_tensor.data<int>();
+#0 1160.6           |                                           ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/group_points.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/group_points.cpp:27:57: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        27 |     const float *grad_out = grad_out_tensor.data<float>();
+#0 1160.6           |                                                         ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/group_points.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/group_points.cpp: In function ??int group_points_wrapper_fast(int, int, int, int, int, at::Tensor, at::Tensor, at::Tensor)??:
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/group_points.cpp:37:53: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        37 |     const float *points = points_tensor.data<float>();
+#0 1160.6           |                                                     ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/group_points.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/group_points.cpp:38:43: warning: ??T* at::Tensor::data() const [with T = int]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        38 |     const int *idx = idx_tensor.data<int>();
+#0 1160.6           |                                           ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/group_points.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/group_points.cpp:39:41: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        39 |     float *out = out_tensor.data<float>();
+#0 1160.6           |                                         ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/group_points.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     [3/9] c++ -MMD -MF /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_batch/src/ball_query.o.d -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -I/usr/local/lib/python3.8/dist-packages/torch/include -I/usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include -I/usr/local/lib/python3.8/dist-packages/torch/include/TH -I/usr/local/lib/python3.8/dist-packages/torch/include/THC -I/usr/local/cuda/include -I/usr/include/python3.8 -c -c /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/ball_query.cpp -o /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_batch/src/ball_query.o -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1013"' -DTORCH_EXTENSION_NAME=pointnet2_batch_cuda -D_GLIBCXX_USE_CXX11_ABI=1 -std=c++14
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/ball_query.cpp: In function ??int ball_query_wrapper_fast(int, int, int, float, int, at::Tensor, at::Tensor, at::Tensor)??:
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/ball_query.cpp:22:16: warning: ??at::DeprecatedTypeProperties& at::Tensor::type() const?? is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+#0 1160.6        22 |    if (!x.type().is_cuda()) { \
+#0 1160.6           |                ^
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/ball_query.cpp:33:24: note: in expansion of macro ??CHECK_CUDA??
+#0 1160.6        33 | #define CHECK_INPUT(x) CHECK_CUDA(x);CHECK_CONTIGUOUS(x)
+#0 1160.6           |                        ^~~~~~~~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/ball_query.cpp:38:5: note: in expansion of macro ??CHECK_INPUT??
+#0 1160.6        38 |     CHECK_INPUT(new_xyz_tensor);
+#0 1160.6           |     ^~~~~~~~~~~
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/ball_query.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:216:30: note: declared here
+#0 1160.6       216 |   DeprecatedTypeProperties & type() const {
+#0 1160.6           |                              ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/ball_query.cpp:22:16: warning: ??at::DeprecatedTypeProperties& at::Tensor::type() const?? is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+#0 1160.6        22 |    if (!x.type().is_cuda()) { \
+#0 1160.6           |                ^
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/ball_query.cpp:33:24: note: in expansion of macro ??CHECK_CUDA??
+#0 1160.6        33 | #define CHECK_INPUT(x) CHECK_CUDA(x);CHECK_CONTIGUOUS(x)
+#0 1160.6           |                        ^~~~~~~~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/ball_query.cpp:39:5: note: in expansion of macro ??CHECK_INPUT??
+#0 1160.6        39 |     CHECK_INPUT(xyz_tensor);
+#0 1160.6           |     ^~~~~~~~~~~
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/ball_query.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:216:30: note: declared here
+#0 1160.6       216 |   DeprecatedTypeProperties & type() const {
+#0 1160.6           |                              ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/ball_query.cpp:40:55: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        40 |     const float *new_xyz = new_xyz_tensor.data<float>();
+#0 1160.6           |                                                       ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/ball_query.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/ball_query.cpp:41:47: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        41 |     const float *xyz = xyz_tensor.data<float>();
+#0 1160.6           |                                               ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/ball_query.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/ball_query.cpp:42:37: warning: ??T* at::Tensor::data() const [with T = int]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        42 |     int *idx = idx_tensor.data<int>();
+#0 1160.6           |                                     ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/ball_query.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     [4/9] /usr/local/cuda/bin/nvcc  -I/usr/local/lib/python3.8/dist-packages/torch/include -I/usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include -I/usr/local/lib/python3.8/dist-packages/torch/include/TH -I/usr/local/lib/python3.8/dist-packages/torch/include/THC -I/usr/local/cuda/include -I/usr/include/python3.8 -c -c /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate_gpu.cu -o /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate_gpu.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1013"' -DTORCH_EXTENSION_NAME=pointnet2_batch_cuda -D_GLIBCXX_USE_CXX11_ABI=1 -gencode=arch=compute_72,code=compute_72 -gencode=arch=compute_72,code=sm_72 -std=c++14
+#0 1160.6     FAILED: /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate_gpu.o
+#0 1160.6     /usr/local/cuda/bin/nvcc  -I/usr/local/lib/python3.8/dist-packages/torch/include -I/usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include -I/usr/local/lib/python3.8/dist-packages/torch/include/TH -I/usr/local/lib/python3.8/dist-packages/torch/include/THC -I/usr/local/cuda/include -I/usr/include/python3.8 -c -c /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate_gpu.cu -o /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate_gpu.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1013"' -DTORCH_EXTENSION_NAME=pointnet2_batch_cuda -D_GLIBCXX_USE_CXX11_ABI=1 -gencode=arch=compute_72,code=compute_72 -gencode=arch=compute_72,code=sm_72 -std=c++14
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate_gpu.cu(74): error: identifier "THREADS_PER_BLOCK" is undefined
+#0 1160.6     
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate_gpu.cu(74): error: identifier "DIVUP" is undefined
+#0 1160.6     
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate_gpu.cu(118): error: identifier "THREADS_PER_BLOCK" is undefined
+#0 1160.6     
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate_gpu.cu(118): error: identifier "DIVUP" is undefined
+#0 1160.6     
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate_gpu.cu(162): error: identifier "THREADS_PER_BLOCK" is undefined
+#0 1160.6     
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate_gpu.cu(162): error: identifier "DIVUP" is undefined
+#0 1160.6     
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/c10/util/irange.h(54): warning: pointless comparison of unsigned integer with zero
+#0 1160.6               detected during:
+#0 1160.6                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator==(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=size_t, one_sided=false, <unnamed>=0]"
+#0 1160.6     (61): here
+#0 1160.6                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator!=(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=size_t, one_sided=false, <unnamed>=0]"
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/c10/core/TensorImpl.h(77): here
+#0 1160.6     
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/c10/util/irange.h(54): warning: pointless comparison of unsigned integer with zero
+#0 1160.6               detected during:
+#0 1160.6                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator==(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=std::size_t, one_sided=true, <unnamed>=0]"
+#0 1160.6     (61): here
+#0 1160.6                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator!=(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=std::size_t, one_sided=true, <unnamed>=0]"
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/qualified_name.h(73): here
+#0 1160.6     
+#0 1160.6     6 errors detected in the compilation of "/home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/interpolate_gpu.cu".
+#0 1160.6     [5/9] c++ -MMD -MF /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_batch/src/sampling.o.d -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -I/usr/local/lib/python3.8/dist-packages/torch/include -I/usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include -I/usr/local/lib/python3.8/dist-packages/torch/include/TH -I/usr/local/lib/python3.8/dist-packages/torch/include/THC -I/usr/local/cuda/include -I/usr/include/python3.8 -c -c /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/sampling.cpp -o /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_batch/src/sampling.o -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1013"' -DTORCH_EXTENSION_NAME=pointnet2_batch_cuda -D_GLIBCXX_USE_CXX11_ABI=1 -std=c++14
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/sampling.cpp: In function ??int gather_points_wrapper_fast(int, int, int, int, at::Tensor, at::Tensor, at::Tensor)??:
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/sampling.cpp:23:53: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        23 |     const float *points = points_tensor.data<float>();
+#0 1160.6           |                                                     ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/sampling.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/sampling.cpp:24:43: warning: ??T* at::Tensor::data() const [with T = int]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        24 |     const int *idx = idx_tensor.data<int>();
+#0 1160.6           |                                           ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/sampling.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/sampling.cpp:25:41: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        25 |     float *out = out_tensor.data<float>();
+#0 1160.6           |                                         ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/sampling.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/sampling.cpp: In function ??int gather_points_grad_wrapper_fast(int, int, int, int, at::Tensor, at::Tensor, at::Tensor)??:
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/sampling.cpp:35:57: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        35 |     const float *grad_out = grad_out_tensor.data<float>();
+#0 1160.6           |                                                         ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/sampling.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/sampling.cpp:36:43: warning: ??T* at::Tensor::data() const [with T = int]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        36 |     const int *idx = idx_tensor.data<int>();
+#0 1160.6           |                                           ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/sampling.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/sampling.cpp:37:57: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        37 |     float *grad_points = grad_points_tensor.data<float>();
+#0 1160.6           |                                                         ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/sampling.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/sampling.cpp: In function ??int farthest_point_sampling_wrapper(int, int, int, at::Tensor, at::Tensor, at::Tensor)??:
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/sampling.cpp:47:53: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        47 |     const float *points = points_tensor.data<float>();
+#0 1160.6           |                                                     ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/sampling.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/sampling.cpp:48:43: warning: ??T* at::Tensor::data() const [with T = float]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        48 |     float *temp = temp_tensor.data<float>();
+#0 1160.6           |                                           ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/sampling.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/sampling.cpp:49:37: warning: ??T* at::Tensor::data() const [with T = int]?? is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+#0 1160.6        49 |     int *idx = idx_tensor.data<int>();
+#0 1160.6           |                                     ^
+#0 1160.6     In file included from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/ATen/Tensor.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/autograd/variable.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/jit/api/module.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+#0 1160.6                      from /usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+#0 1160.6                      from /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/sampling.cpp:8:
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/TensorBody.h:238:7: note: declared here
+#0 1160.6       238 |   T * data() const {
+#0 1160.6           |       ^~~~
+#0 1160.6     [6/9] c++ -MMD -MF /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_batch/src/pointnet2_api.o.d -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -I/usr/local/lib/python3.8/dist-packages/torch/include -I/usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include -I/usr/local/lib/python3.8/dist-packages/torch/include/TH -I/usr/local/lib/python3.8/dist-packages/torch/include/THC -I/usr/local/cuda/include -I/usr/include/python3.8 -c -c /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/pointnet2_api.cpp -o /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_batch/src/pointnet2_api.o -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1013"' -DTORCH_EXTENSION_NAME=pointnet2_batch_cuda -D_GLIBCXX_USE_CXX11_ABI=1 -std=c++14
+#0 1160.6     [7/9] /usr/local/cuda/bin/nvcc  -I/usr/local/lib/python3.8/dist-packages/torch/include -I/usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include -I/usr/local/lib/python3.8/dist-packages/torch/include/TH -I/usr/local/lib/python3.8/dist-packages/torch/include/THC -I/usr/local/cuda/include -I/usr/include/python3.8 -c -c /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/ball_query_gpu.cu -o /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_batch/src/ball_query_gpu.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1013"' -DTORCH_EXTENSION_NAME=pointnet2_batch_cuda -D_GLIBCXX_USE_CXX11_ABI=1 -gencode=arch=compute_72,code=compute_72 -gencode=arch=compute_72,code=sm_72 -std=c++14
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/c10/util/irange.h(54): warning: pointless comparison of unsigned integer with zero
+#0 1160.6               detected during:
+#0 1160.6                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator==(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=size_t, one_sided=false, <unnamed>=0]"
+#0 1160.6     (61): here
+#0 1160.6                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator!=(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=size_t, one_sided=false, <unnamed>=0]"
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/c10/core/TensorImpl.h(77): here
+#0 1160.6     
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/c10/util/irange.h(54): warning: pointless comparison of unsigned integer with zero
+#0 1160.6               detected during:
+#0 1160.6                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator==(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=std::size_t, one_sided=true, <unnamed>=0]"
+#0 1160.6     (61): here
+#0 1160.6                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator!=(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=std::size_t, one_sided=true, <unnamed>=0]"
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/qualified_name.h(73): here
+#0 1160.6     
+#0 1160.6     [8/9] /usr/local/cuda/bin/nvcc  -I/usr/local/lib/python3.8/dist-packages/torch/include -I/usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include -I/usr/local/lib/python3.8/dist-packages/torch/include/TH -I/usr/local/lib/python3.8/dist-packages/torch/include/THC -I/usr/local/cuda/include -I/usr/include/python3.8 -c -c /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/group_points_gpu.cu -o /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_batch/src/group_points_gpu.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1013"' -DTORCH_EXTENSION_NAME=pointnet2_batch_cuda -D_GLIBCXX_USE_CXX11_ABI=1 -gencode=arch=compute_72,code=compute_72 -gencode=arch=compute_72,code=sm_72 -std=c++14
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/c10/util/irange.h(54): warning: pointless comparison of unsigned integer with zero
+#0 1160.6               detected during:
+#0 1160.6                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator==(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=size_t, one_sided=false, <unnamed>=0]"
+#0 1160.6     (61): here
+#0 1160.6                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator!=(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=size_t, one_sided=false, <unnamed>=0]"
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/c10/core/TensorImpl.h(77): here
+#0 1160.6     
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/c10/util/irange.h(54): warning: pointless comparison of unsigned integer with zero
+#0 1160.6               detected during:
+#0 1160.6                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator==(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=std::size_t, one_sided=true, <unnamed>=0]"
+#0 1160.6     (61): here
+#0 1160.6                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator!=(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=std::size_t, one_sided=true, <unnamed>=0]"
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/qualified_name.h(73): here
+#0 1160.6     
+#0 1160.6     [9/9] /usr/local/cuda/bin/nvcc  -I/usr/local/lib/python3.8/dist-packages/torch/include -I/usr/local/lib/python3.8/dist-packages/torch/include/torch/csrc/api/include -I/usr/local/lib/python3.8/dist-packages/torch/include/TH -I/usr/local/lib/python3.8/dist-packages/torch/include/THC -I/usr/local/cuda/include -I/usr/include/python3.8 -c -c /home/dsgn2/DSGN2_fork/pcdet/ops/pointnet2/pointnet2_batch/src/sampling_gpu.cu -o /home/dsgn2/DSGN2_fork/build/temp.linux-aarch64-3.8/pcdet/ops/pointnet2/pointnet2_batch/src/sampling_gpu.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1013"' -DTORCH_EXTENSION_NAME=pointnet2_batch_cuda -D_GLIBCXX_USE_CXX11_ABI=1 -gencode=arch=compute_72,code=compute_72 -gencode=arch=compute_72,code=sm_72 -std=c++14
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/c10/util/irange.h(54): warning: pointless comparison of unsigned integer with zero
+#0 1160.6               detected during:
+#0 1160.6                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator==(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=size_t, one_sided=false, <unnamed>=0]"
+#0 1160.6     (61): here
+#0 1160.6                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator!=(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=size_t, one_sided=false, <unnamed>=0]"
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/c10/core/TensorImpl.h(77): here
+#0 1160.6     
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/c10/util/irange.h(54): warning: pointless comparison of unsigned integer with zero
+#0 1160.6               detected during:
+#0 1160.6                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator==(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=std::size_t, one_sided=true, <unnamed>=0]"
+#0 1160.6     (61): here
+#0 1160.6                 instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator!=(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=std::size_t, one_sided=true, <unnamed>=0]"
+#0 1160.6     /usr/local/lib/python3.8/dist-packages/torch/include/ATen/core/qualified_name.h(73): here
+#0 1160.6     
+#0 1160.6     ninja: build stopped: subcommand failed.
+#0 1160.6     Traceback (most recent call last):
+#0 1160.6       File "/usr/local/lib/python3.8/dist-packages/torch/utils/cpp_extension.py", line 1890, in _run_ninja_build
+#0 1160.6         subprocess.run(
+#0 1160.6       File "/usr/lib/python3.8/subprocess.py", line 516, in run
+#0 1160.6         raise CalledProcessError(retcode, process.args,
+#0 1160.6     subprocess.CalledProcessError: Command '['ninja', '-v']' returned non-zero exit status 1.
+#0 1160.6     
+#0 1160.6     The above exception was the direct cause of the following exception:
+#0 1160.6     
+#0 1160.6     Traceback (most recent call last):
+#0 1160.6       File "<string>", line 1, in <module>
+#0 1160.6       File "/home/dsgn2/DSGN2_fork/setup.py", line 31, in <module>
+#0 1160.6         setup(
+#0 1160.6       File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 144, in setup
+#0 1160.6         return distutils.core.setup(**attrs)
+#0 1160.6       File "/usr/lib/python3.8/distutils/core.py", line 148, in setup
+#0 1160.6         dist.run_commands()
+#0 1160.6       File "/usr/lib/python3.8/distutils/dist.py", line 966, in run_commands
+#0 1160.6         self.run_command(cmd)
+#0 1160.6       File "/usr/lib/python3.8/distutils/dist.py", line 985, in run_command
+#0 1160.6         cmd_obj.run()
+#0 1160.6       File "/usr/lib/python3/dist-packages/setuptools/command/develop.py", line 38, in run
+#0 1160.6         self.install_for_development()
+#0 1160.6       File "/usr/lib/python3/dist-packages/setuptools/command/develop.py", line 140, in install_for_development
+#0 1160.6         self.run_command('build_ext')
+#0 1160.6       File "/usr/lib/python3.8/distutils/cmd.py", line 313, in run_command
+#0 1160.6         self.distribution.run_command(command)
+#0 1160.6       File "/usr/lib/python3.8/distutils/dist.py", line 985, in run_command
+#0 1160.6         cmd_obj.run()
+#0 1160.6       File "/usr/lib/python3/dist-packages/setuptools/command/build_ext.py", line 87, in run
+#0 1160.6         _build_ext.run(self)
+#0 1160.6       File "/home/dsgn2/.local/lib/python3.8/site-packages/Cython/Distutils/old_build_ext.py", line 186, in run
+#0 1160.6         _build_ext.build_ext.run(self)
+#0 1160.6       File "/usr/lib/python3.8/distutils/command/build_ext.py", line 340, in run
+#0 1160.6         self.build_extensions()
+#0 1160.6       File "/usr/local/lib/python3.8/dist-packages/torch/utils/cpp_extension.py", line 845, in build_extensions
+#0 1160.6         build_ext.build_extensions(self)
+#0 1160.6       File "/home/dsgn2/.local/lib/python3.8/site-packages/Cython/Distutils/old_build_ext.py", line 195, in build_extensions
+#0 1160.6         _build_ext.build_ext.build_extensions(self)
+#0 1160.6       File "/usr/lib/python3.8/distutils/command/build_ext.py", line 449, in build_extensions
+#0 1160.6         self._build_extensions_serial()
+#0 1160.6       File "/usr/lib/python3.8/distutils/command/build_ext.py", line 474, in _build_extensions_serial
+#0 1160.6         self.build_extension(ext)
+#0 1160.6       File "/usr/lib/python3/dist-packages/setuptools/command/build_ext.py", line 208, in build_extension
+#0 1160.6         _build_ext.build_extension(self, ext)
+#0 1160.6       File "/usr/lib/python3.8/distutils/command/build_ext.py", line 528, in build_extension
+#0 1160.6         objects = self.compiler.compile(sources,
+#0 1160.6       File "/usr/local/lib/python3.8/dist-packages/torch/utils/cpp_extension.py", line 660, in unix_wrap_ninja_compile
+#0 1160.6         _write_ninja_file_and_compile_objects(
+#0 1160.6       File "/usr/local/lib/python3.8/dist-packages/torch/utils/cpp_extension.py", line 1571, in _write_ninja_file_and_compile_objects
+#0 1160.6         _run_ninja_build(
+#0 1160.6       File "/usr/local/lib/python3.8/dist-packages/torch/utils/cpp_extension.py", line 1906, in _run_ninja_build
+#0 1160.6         raise RuntimeError(message) from e
+#0 1160.6     RuntimeError: Error compiling objects for extension
+#0 1160.6     ----------------------------------------
+#0 1160.6 ERROR: Command errored out with exit status 1: /usr/bin/python3 -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/home/dsgn2/DSGN2_fork/setup.py'"'"'; __file__='"'"'/home/dsgn2/DSGN2_fork/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' develop --no-deps --user --prefix= Check the logs for full command output.
+------
+failed to solve: process "/bin/bash -l -c cd /home/${USER}/DSGN2_fork/ && pip3 install -r requirements.txt && pip3 install -e ." did not complete successfully: exit code: 1
