@@ -1,6 +1,6 @@
 version: "3.8"
 services:
-    jetson-app:
+    dsgn2:
         image: ${ARCH}dsgn2:${TAG}
         network_mode: host
         pid: host
