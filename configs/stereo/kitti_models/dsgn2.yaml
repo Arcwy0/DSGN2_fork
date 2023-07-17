@@ -86,15 +86,15 @@ MODEL:
             depth: 34
             num_stages: 4
             out_indices: [0, 1, 2, 3]
-            frozen_stages: -1 
+            frozen_stages: 1 
             norm_cfg:
                 type: 'BN'
                 requires_grad: True
-            norm_eval: False  # sem: True
+            norm_eval: True  # sem: True
             style: 'pytorch'
             with_max_pool: False
             deep_stem: False
-            block_with_final_relu: False  # sem: True
+            block_with_final_relu: True  # sem: True
             base_channels: 64
             strides: [1, 2, 1, 1]  # sem [1, 2, 2, 2]
             dilations: [1, 1, 2, 4]  # sem [1, 1, 1, 1]
