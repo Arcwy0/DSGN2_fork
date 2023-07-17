@@ -51,16 +51,15 @@ ARG INSTALL_CHANNEL=pytorch-nightly
 RUN export _GLIBCXX_USE_CXX11_ABI=1
 
 # Install PyTorch
-RUN git clone --recursive --branch v2.0.1 http://github.com/pytorch/pytorch
-RUN cd pytorch 
-RUN pip3 install -r requirements.txt
+RUN git clone --recursive --branch v2.0.1 https://github.com/pytorch/pytorch
+RUN cd pytorch && pip3 install -r requirements.txt
 # From Jetson forum: https://forums.developer.nvidia.com/t/pytorch-for-jetson/72048/1321
 RUN pip3 install scikit-build
 RUN pip3 install ninja
 RUN export CMAKE_PREFIX_PATH=${CONDA_PREFIX:-"$(dirname $(which conda))/../"}
-RUN python3 setup.py develop && python3 -c "import torch"
-RUN python3 setup.py bdist_wheel
-RUN pip3 install dist/*.whl
+RUN cd pytorch && python3 setup.py develop && python3 -c "import torch"
+RUN cd pytorch && python3 setup.py bdist_wheel
+RUN cd pytorch && pip3 install dist/*.whl
 
 
 # if libgl1 won't help, install ffmpeg libsm6 libxext6
