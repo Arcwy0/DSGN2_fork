@@ -57,6 +57,8 @@ RUN cd pytorch && pip3 install -r requirements.txt
 RUN pip3 install scikit-build
 RUN pip3 install ninja
 RUN export CMAKE_PREFIX_PATH=${CONDA_PREFIX:-"$(dirname $(which conda))/../"}
+RUN pip3 uninstall torch
+RUN pip3 uninstall torch
 RUN cd pytorch && python3 setup.py develop && python3 -c "import torch"
 RUN cd pytorch && python3 setup.py bdist_wheel
 RUN cd pytorch && pip3 install dist/*.whl

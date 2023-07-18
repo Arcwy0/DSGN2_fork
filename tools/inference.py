@@ -63,5 +63,3 @@ def parse_config():
         cfg_from_list(args.set_cfgs, cfg)
 
     return args, cfg
-
-
