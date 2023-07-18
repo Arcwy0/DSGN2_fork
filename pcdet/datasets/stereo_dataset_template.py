@@ -109,6 +109,7 @@ class StereoDatasetTemplate(torch_data.Dataset):
         Returns:
 
         """
+        
 
     def merge_all_iters_to_one_epoch(self, merge=True, epochs=None):
         if merge:

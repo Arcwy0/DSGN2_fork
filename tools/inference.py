@@ -63,3 +63,17 @@ def parse_config():
         cfg_from_list(args.set_cfgs, cfg)
 
     return args, cfg
+
+class Inference():
+    def __init__(model, dataloader, logger):
+        self.model = model
+        self.dataloader = dataloader
+        self.logger = logger
+        model.load_params_from_file(filename=args.ckpt, logger=logger, to_cpu=dist_test)
+        model.cuda()
+        model.eval()
+
+    def inference(self, batch_dict):
+        self.model.forward(batch_dict)
+        
+
