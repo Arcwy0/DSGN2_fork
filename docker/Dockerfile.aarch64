@@ -12,64 +12,16 @@ RUN useradd -m ${USER} --uid=${UID} && echo "${USER}:${PW}" | chpasswd
 
 RUN apt-get update && apt-get install -y \
         wget vim usbutils \
-        libgl1 build-essential ca-certificates ccache autoconf bc \
-        cmake curl libjpeg-dev libpng-dev libboost-dev libopenmpi-dev \
-        iputils-ping libbz2-dev \
+        libgl1 \
         &&  apt install -y protobuf-compiler \
         && rm -rf /var/lib/apt/lists/*
-# Some libs from forum Jetson, don't know if they are necessary
-# libc++-dev libcgal-dev libffi-dev libfreetype6-dev libhdf5-dev libjpeg-dev liblzma-dev \
-#        libncurses5-dev libncursesw5-dev libpng-dev libreadline-dev libssl-dev libsqlite3-dev libxml2-dev libxslt-dev \
-#        locales moreutils openssl python-openssl rsync scons \
-# Environment variables for pytorch rebuild
-RUN export patch_cuda=/usr/local/cuda-11.4 
-ENV CUDA_HOME="/usr/local/cuda"
-ENV PATH="/usr/local/cuda/bin:${PATH}"
-ENV USE_CUDA=1
-ENV USE_NCCL=0
-ENV USE_NNPACK=1
-ENV USE_DISTRIBUTED=1
-ENV USE_QNNPACK=0
-ENV USE_PYTORCH_QNNPACK=0
-ENV USE_FBGEMM=1
-ENV USE_NUMPY=1
-ARG TORCH_CUDA_ARCH_LIST=5.3;6.1;6.2;7.2;8.7
-RUN export TORCH_CUDA_ARCH_LIST='7.2+PTX'
-ENV THCudaCheck = C10_CUDA_CHECK
-ENV FORCE_CUDA="1"
-ENV PATH="${PATH}:/home/${USER}/.local/bin"
-RUN export OPENBLAS_CORETYPE=ARMV8
-ENV PATH="${PATH}:/usr/local/bin/cmake"
-ENV PATH="${PATH}:/usr/include/boost"
-RUN export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
-RUN export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-RUN echo "export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}" >> ~/.bashrc &&\
-    echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}" >> ~/.bashrc
-RUN export CUDA_NVCC_EXECUTABLE=$(which nvcc)
-ARG CUDA_CHANNEL=nvidia
-ARG INSTALL_CHANNEL=pytorch-nightly
-RUN export _GLIBCXX_USE_CXX11_ABI=1
-
-# Install PyTorch
-RUN git clone --recursive --branch v2.0.1 https://github.com/pytorch/pytorch
-RUN cd pytorch && pip3 install -r requirements.txt
-# From Jetson forum: https://forums.developer.nvidia.com/t/pytorch-for-jetson/72048/1321
-RUN pip3 install scikit-build
-RUN pip3 install ninja
-RUN export CMAKE_PREFIX_PATH=${CONDA_PREFIX:-"$(dirname $(which conda))/../"}
-RUN pip3 uninstall -y torch
-RUN pip3 uninstall -y torch
-RUN cd pytorch && python3 setup.py develop && python3 -c "import torch"
-RUN cd pytorch && python3 setup.py bdist_wheel
-RUN cd pytorch && pip3 install dist/*.whl
-
-
 # if libgl1 won't help, install ffmpeg libsm6 libxext6
 WORKDIR /home/${USER}
 USER root
 RUN cd /home/${USER} && chown -R ${UID}:${GID} ./
 USER ${UID}:${GID}
 
+ENV PATH="${PATH}:/home/${USER}/.local/bin"
 RUN pip3 install -U --no-cache-dir protobuf3
 RUN pip3 install -U --no-cache-dir numpy \
 && pip3 install -U --no-cache-dir matplotlib
@@ -77,7 +29,9 @@ RUN pip3 install -U --no-cache-dir pycocotools \
 && pip3 install -U openmim
 RUN mim install mmcv-full
 # Install DSGN++
+RUN export OPENBLAS_CORETYPE=ARMV8
 # https://github.com/chenyilun95/DSGN2 https://github.com/Arcwy0/DSGN2_fork
+ARG YA=2
 RUN git clone https://github.com/Arcwy0/DSGN2_fork --branch main
 RUN cd DSGN2_fork/mmdetection-v2.22.0/ && pip3 install -e .
 
@@ -85,6 +39,8 @@ RUN cd DSGN2_fork/mmdetection-v2.22.0/ && pip3 install -e .
 USER root
 RUN apt-get update && apt update && apt install libboost-dev -y \
         && rm -rf /var/lib/apt/lists/*
+ENV PATH="${PATH}:/usr/local/bin/cmake"
+ENV PATH="${PATH}:/usr/include/boost"
 # RUN echo "export PATH=/usr/local/bin/cmake:$PATH" >> ~/.bashrc
 # RUN echo "export PATH=/usr/include/boost:$PATH" >> ~/.bashrc
 # RUN source ~/.bashrc
@@ -107,6 +63,15 @@ RUN cd ./spconv121_torch200/dist && ls && pip3 install spconv-1.2.1-cp38-cp38-li
 USER ${UID}:${GID}
 RUN cd /home/${USER}
 SHELL ["/bin/bash", "-l", "-c"]
+ARG TORCH_CUDA_ARCH_LIST='7.2+PTX'
+RUN export TORCH_CUDA_ARCH_LIST='7.2+PTX'
+ENV THCudaCheck = C10_CUDA_CHECK
+ENV FORCE_CUDA="1"
+RUN export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+RUN export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+RUN echo "export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}" >> ~/.bashrc &&\
+    echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}" >> ~/.bashrc
+RUN export CUDA_NVCC_EXECUTABLE=$(which nvcc)
 RUN pip3 install -U Cython
 RUN pip3 install -U --no-cache-dir numba
 RUN cd /home/${USER}/DSGN2_fork/ && pip3 install -r requirements.txt && CFLAGS="-fopenmp" pip3 install -e .
