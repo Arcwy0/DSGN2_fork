@@ -31,7 +31,7 @@ RUN mim install mmcv-full
 # Install DSGN++
 RUN export OPENBLAS_CORETYPE=ARMV8
 # https://github.com/chenyilun95/DSGN2 https://github.com/Arcwy0/DSGN2_fork
-ARG YA=2
+ARG YA=4
 RUN git clone https://github.com/Arcwy0/DSGN2_fork --branch main
 RUN cd DSGN2_fork/mmdetection-v2.22.0/ && pip3 install -e .
 
