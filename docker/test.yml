@@ -11,6 +11,15 @@ services:
             - DISPLAY=$DISPLAY
         privileged: true
         tty: true
+        runtime: nvidia
+        deploy:
+          resources:
+            reservations:
+              devices:
+                  - driver: nvidia
+                    count: 1
+                    capabilities: [gpu]
+
         ports:
             - '8080:8080'
         ipc: host
@@ -22,4 +31,3 @@ services:
             - /dev:/dev:rw
             - /dev:/dev \
         command: /bin/sh
-        runtime: nvidia
