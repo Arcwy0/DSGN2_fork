@@ -9,7 +9,7 @@ ARG GID=1001
 ARG PW=user 
 ARG DEBIAN_FRONTEND=noninteractive
 RUN useradd -m ${USER} --uid=${UID} && echo "${USER}:${PW}" | chpasswd
-RUN useradd -G video -g 1001 -m -s /bin/bash  -u 1001 "$USER"
+RUN usermod -aG video ${USER}
 
 RUN apt-get update && apt-get install -y \
         wget vim usbutils \
