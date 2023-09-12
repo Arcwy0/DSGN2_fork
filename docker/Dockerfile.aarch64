@@ -28,6 +28,8 @@ RUN pip3 install -U --no-cache-dir numpy \
 && pip3 install -U --no-cache-dir matplotlib
 RUN pip3 install -U --no-cache-dir pycocotools \
 && pip3 install -U openmim
+RUN pip install -U --no-cache-dir six
+RUN pip install -U --no-cache-dir setuptools
 RUN mim install mmcv-full==1.5.0
 # Install DSGN++
 RUN export OPENBLAS_CORETYPE=ARMV8
